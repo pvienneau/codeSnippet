@@ -1,6 +1,6 @@
 <?php
 
-class dashboardController extends Controller
+class DashboardController extends Controller
 {
 	public function __construct(){		
 		if ( ! AuthUser::isLoggedIn()) {
