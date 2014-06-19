@@ -49,40 +49,10 @@ class AuthUser
 		return self::$is_logged_in;
 	}
 	
-	static public function isAdmin()
-	{
-		return self::$record ? self::$record->is_admin: false;
-	}
-	
-	static public function accessLevel($section){
-		if(self::isAdmin()) return 2; // Admin has full access
-		if(!(self::$record)) return 0;
-		$access=0;
-		switch($section){
-			case "invoices":
-				$access=self::$record->invoices;
-				break;
-			case "estimates":
-				$access=self::$record->estimates;
-				break;
-			case "recurrings":
-				$access=self::$record->recurrings;
-				break;
-			case "clients":
-				$access=self::$record->clients;
-				break;
-			case "users":
-				$access=self::$record->users;
-				break;
-		}
-		return (int)$access;
-	}
 	static public function getDefaultController(){
 		if(!self::$record) self::load();
-		if(	self::accessLevel('invoices') > 0) return 'invoice';
-		if(	self::accessLevel('estimates') > 0) return 'estimate';
-		if(	self::accessLevel('recurrings') > 0) return 'recurring';
-		if(	self::accessLevel('clients') > 0) return 'client';
+		
+		return DEFAULT_CONTROLLER;
 		
 	}
 	static public function getRecord()
@@ -92,7 +62,7 @@ class AuthUser
 	
 	static public function getId()
 	{
-		return self::$record ? self::$record->id: false;
+		return self::$record ? self::$record->user_id: false;
 	}
 	
 	static public function getUserName()
