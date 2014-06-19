@@ -14,8 +14,9 @@ Record::connection($PDO);
 Record::getConnection()->exec("set names 'utf8'");
 //include 'Record.php';
 
-use_helper('I18n', 'General');
-I18n::setLocale('fr');
+#use_helper('I18n', 'General');
+use_helper('AuthUser', 'General');
+#I18n::setLocale('fr');
 
 setlocale(LC_ALL, 'fr_CA');
 //setlocale(LC_ALL, 'en_US.UTF-8');
@@ -25,12 +26,14 @@ setlocale(LC_NUMERIC, 'en_US');
 
 
 Dispatcher::addRoute(array(
-	'/project/:num/overview' => 'project/overview/$1',
-	'/project/:num/todo' => 'todo/project/$1',
-	'/project/:num/milestone' => 'milestone/project/$1',
-	'/project/:num/:any' => '$2/$1',
-	'/logout' => 'login/logout',
-	'/people:any' => 'user$1'
+	#'/project/:num/overview' => 'project/overview/$1',
+	#'/project/:num/todo' => 'todo/project/$1',
+	#'/project/:num/milestone' => 'milestone/project/$1',
+	#'/project/:num/:any' => '$2/$1',
+	#'/logout' => 'login/logout',
+	#'/people:any' => 'user$1'
+	'/login' => 'authentication/login',
+	'/logout' => 'authentication/logout'
 ));
 
 Dispatcher::dispatch(isset($_GET['u']) ? $_GET['u']: AuthUser::getDefaultController());

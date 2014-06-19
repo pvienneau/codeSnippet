@@ -10,7 +10,7 @@
  * @since  0.1
  */
 
-class LoginController extends Controller
+class AuthenticationController extends Controller
 {
     function __construct()
     {

@@ -2,16 +2,11 @@
 
 define('DEBUG', true);
 
-define('DB_DSN', 'mysql:dbname=deadline;host=localhost');
-define('DB_USER', 'root');
-define('DB_PASS', 'sendf0rmer$');
+define('DB_DSN', 'mysql:dbname=codesnippet;host=localhost');
+define('DB_USER', 'mysql_user');
+define('DB_PASS', 'DmTeVb4');
 
 $config = array();
-
-$config['tax_id'] = array(
-	1 => '827789868',
-	2 => '1216178501'
-);
 
 // email config
 $config['email_protocol'] = 'mail'; // mail, smtp or sendmail are available
