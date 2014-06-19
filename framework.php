@@ -43,8 +43,8 @@ if (!defined('HELPER_PATH'))		define('HELPER_PATH', CORE_ROOT.DIRECTORY_SEPARATO
 if (!defined('BASE_URL'))			define('BASE_URL', 'http://'.dirname($_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME']) .'/');
 if (!defined('URL_SUFFIX'))			define('URL_SUFFIX', null);
 
-if (!defined('DEFAULT_CONTROLLER')) define('DEFAULT_CONTROLLER', 'index');
-if (!defined('DEFAULT_ACTION'))		define('DEFAULT_ACTION', 'index');
+if (!defined('DEFAULT_CONTROLLER')) define('DEFAULT_CONTROLLER', 'user');
+if (!defined('DEFAULT_ACTION'))		define('DEFAULT_ACTION', 'view');
 if (!defined('DEFAULT_LOCALE'))		define('DEFAULT_LOCALE', 'en');
 
 if (!defined('TABLE_PREFIX'))		define('TABLE_PREFIX', '');
@@ -559,7 +559,7 @@ class Record
 	
 	public static function findByIdFrom($class_name, $id)
 	{
-		return self::findOneFrom($class_name, 'id=?', array($id));
+		return self::findOneFrom($class_name, $class_name.'_id=?', array($id));
 	}
 	
 	public static function findOneFrom($class_name, $where, $values=array())
@@ -596,6 +596,29 @@ class Record
 		self::logQuery($sql);
 		
 		return (int) $stmt->fetchColumn();
+	}
+	
+	/**/
+	
+	public static function findAll(){
+		$table = self::getTable();
+
+		return self::findAllFrom($table);
+	}
+	
+	public static function findById($id = FALSE){
+		if($id === FALSE) return FALSE;
+		
+		$table = self::getTable();
+		
+		
+		return self::findByIdFrom($table, $id);
+	}
+	
+	private static function getTable(){		
+		if(get_called_class() == get_class()) return false;
+		
+		return get_called_class();
 	}
 }
 
@@ -715,7 +738,7 @@ function include_view($view, $vars=false) {
  */
 class Controller
 {
-	protected $layout = false;
+	protected $layout = FALSE;
 	protected $layout_vars = array();
 	
 	public function execute($action, $params)
@@ -739,6 +762,14 @@ class Controller
 		} else {
 			$this->layout_vars[$var] = $value;
 		}
+	}
+	
+	public function is_submit($class = FALSE, $method = FALSE){
+		$str = 'action_'.($class?$class:strtolower(str_replace('Controller', '', debug_backtrace()[1]['class']))).'_'.($method?$method:debug_backtrace()[1]['function']);
+
+		if(isset($_POST[$str])) return true;
+		
+		return false;
 	}
 	
 	public function render($view, $vars=array())
