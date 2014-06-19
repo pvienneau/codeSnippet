@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Philippe Archambault | Items</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+	
+<link rel="stylesheet" type="text/css" media="all" href="css/foundation.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/application.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/invoice_grey.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.plugins.js"></script>
+<script type="text/javascript" src="js/jquery.application.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="head">
+
+<div id="head_inner">
+
+<h1 id="logo">Philippe Archambault</h1>
+
+
+
+
+
+<ul id="shortcut">
+<li><a href="account/upgrade">Upgrade</a></li>
+<li><a href="account">Account</a></li>
+<li><a href="users">Users</a></li>
+<li><a href="settings">Settings</a></li>
+
+<li><a href="logout" id="logout">Logout</a></li>
+</ul>
+
+
+
+
+	
+<ul id="nav">
+<li><a href="invoices" id="invoices">Invoices</a></li>
+<li><a href="recurring" id="recurring">Recurring</a></li>
+<li><a href="projects" id="projects">Projects</a></li>
+<li><a href="items" class="current" id="items">Items</a></li>
+<li><a href="clients" id="clients">Clients</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="container">
+	
+<div id="page">
+	
+<div class="content new_section" id="new_item_section" style="display: none">
+
+<ul class="sidebar">
+
+<li>
+<a href="#" id="cancel">Cancel</a>
+</li>
+
+</ul>
+	
+<h3 class="title">New Item</h3>
+
+<div class="box">
+
+<form action="/items" method="post">
+
+<div class="inline">
+<label>Description</label>
+<input type="text" name="description" class="field" maxlength="30" />
+
+</div>
+
+<div class="inline qty">
+<label>Qty</label>
+
+<input type="text" name="qty" class="field smallest" value="1" />
+
+<div class="select_wrapper">
+<select name="kind" class="select">
+<option value="hour">hour</option>
+<option value="day">day</option>
+<option value="service">service</option>
+<option value="product">product</option>
+</select></div>
+
+</div>
+
+<div class="inline last">
+<label>Price</label>
+<input type="text" name="price" class="field small" value="0.00" />
+</div>
+
+<div class="inline control">
+<input type="submit" class="button add" value="Add Item" />
+</div>
+
+</form>
+
+</div>
+
+</div><div class="content main_section" id="items_section">
+
+<ul class="sidebar">
+
+<li>
+<a href="#" id="new">New Item</a>
+</li>
+
+</ul>
+
+	
+<h3 class="title">Items</h3>
+
+<ul>
+
+<li id="bar">
+<span class="description">Description</span>
+<span class="qty">Qty</span>
+<span class="price">Price</span>
+<span class="total">Total</span>
+</li>
+
+</ul>
+
+<ul class="rows">
+
+
+<li class="row" id="223189">
+
+<span class="actions" style="display: none">
+<a href="#" class="remove">Remove</a>
+<a href="items/edit/223189" class="edit">Edit</a>
+</span>
+
+<span class="description">Sample Item</span>
+<span class="qty">1 product</span>
+<span class="price">200.00</span>
+<span class="total">200.00</span>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

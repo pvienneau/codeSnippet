@@ -1,0 +1,5 @@
+- Add project to invoice
+- Invoice "sort" (period, client, status)
+- Send invoice (to be tested)
+- Add Client View (stats, graphic etc ... "time tracker style")
+- Paypal integrations (well not sure)

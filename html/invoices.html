@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Philippe Archambault | Invoices</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+	
+<link rel="stylesheet" type="text/css" media="all" href="css/foundation.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/application.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/invoice_grey.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.plugins.js"></script>
+<script type="text/javascript" src="js/jquery.application.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="head">
+
+<div id="head_inner">
+
+<h1 id="logo">Philippe Archambault</h1>
+
+
+
+
+
+<ul id="shortcut">
+<li><a href="account/upgrade">Upgrade</a></li>
+<li><a href="account">Account</a></li>
+<li><a href="users">Users</a></li>
+<li><a href="settings">Settings</a></li>
+
+<li><a href="logout" id="logout">Logout</a></li>
+</ul>
+
+
+
+
+	
+<ul id="nav">
+<li><a href="invoices" class="current" id="invoices">Invoices</a></li>
+<li><a href="recurring" id="recurring">Recurring</a></li>
+<li><a href="projects" id="projects">Projects</a></li>
+<li><a href="items" id="items">Items</a></li>
+<li><a href="clients" id="clients">Clients</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="container">
+	
+<div id="page">
+	
+
+
+<div class="content new_section" id="new_invoice_section" style="display: none">
+
+<ul class="sidebar">
+
+<li>
+<a href="#" id="cancel">Cancel</a>
+</li>
+
+</ul>
+
+
+<div class="message yellow">
+<h2>Invoice Limit Reached</h2>
+<p>We are sorry, the Small subscription plan don't allow you to create more than <strong>3 invoices per month</strong>. If you want to create more invoices and look more professional with unbranded invoices, you can always check out our bigger subscription plans or wait until the next cycle which begins on <strong>05 Jan 2010</strong>.</p>
+<a href="account/upgrade" class="button" id="upgrade">Upgrade</a>
+<a href="#" class="small_button">Cancel</a>
+</div>
+
+
+
+</div>
+
+<div class="content main_section" id="invoices_section">
+
+<ul class="sidebar">
+
+<li>
+<a href="#" id="new">New Invoice</a>
+</li>
+
+</ul>
+
+
+<h3 class="title">Invoices</h3>
+
+<ul>
+
+<li id="filter">
+
+<form action="invoices" method="post">
+
+<label>Period</label>
+
+<div class="select_wrapper">
+<select name="period" class="select">
+<option value="all">All</option>
+<option value="today">Today</option>
+<option value="yesterday">Yesterday</option>
+<option value="this_month">This Month</option>
+<option value="last_month">Last Month</option>
+<option value="this_year">This Year</option>
+<option value="last_year">Last Year</option>
+</select>
+</div>
+
+<label>Client</label>
+
+<div class="select_wrapper">
+<select name="client" class="select">
+<option value="all">All</option>
+<option value="235206">ISBA Music Entertainment Group</option>
+<option value="235205">Mountain Mamma</option>
+<option value="235210">Olivier Dumetz</option>
+</select>
+</div>
+
+
+
+
+<label>Status</label>
+
+<div class="select_wrapper">
+<select name="status" class="select">
+<option value="all">All</option>
+<option value="draft">Draft</option>
+<option value="sent">Sent</option>
+<option value="paid">Paid</option>
+<option value="due">Due</option>
+</select>
+</div>
+
+</form>
+
+</li>
+
+<li id="bar">
+<span class="id">ID</span>
+<span class="date">Date</span>
+<span class="client">Client</span>
+<span class="amount">Amount</span>
+<span class="status">Status</span>
+</li>
+
+</ul>
+
+<ul class="rows">
+
+<li class="row" id="246560">
+
+<span class="actions" style="display: none">
+<a href="#" class="remove">Remove</a>
+<a href="invoices/edit/246560" class="edit">Edit</a>
+</span>
+
+<span class="id"><a href="invoices/view/246560">0000042</a></span>
+<span class="date">23 Nov 2009</span>
+<span class="client">ISBA Music Entertainment</span>
+<span class="amount">200.00 CAD</span>
+<span class="status draft">Draft</span>
+
+</li>
+
+<li class="row alt" id="246559">
+
+<span class="actions" style="display: none">
+<a href="#" class="remove">Remove</a>
+<a href="invoices/edit/246559" class="edit">Edit</a>
+</span>
+
+<span class="id"><a href="invoices/view/246559">0000041</a></span>
+<span class="date">19 Nov 2009</span>
+<span class="client">Olivier Dumetz</span>
+<span class="amount">2400.00 CAD</span>
+<span class="status draft">Draft</span>
+
+</li>
+
+<li class="row" id="246558">
+
+<span class="actions" style="display: none">
+<a href="#" class="remove">Remove</a>
+<a href="invoices/edit/246558" class="edit">Edit</a>
+</span>
+
+<span class="id"><a href="invoices/view/246558">0000039</a></span>
+<span class="date">17 Nov 2009</span>
+<span class="client">ISBA Music Entertainment</span>
+<span class="amount">2000.00 CAD</span>
+<span class="status draft">Draft</span>
+
+</li>
+
+<li class="row alt" id="246550">
+
+<span class="actions" style="display: none">
+<a href="#" class="remove">Remove</a>
+<a href="invoices/edit/246550" class="edit">Edit</a>
+</span>
+
+<span class="id"><a href="invoices/view/246550">0000043</a></span>
+<span class="date">03 Dec 2009</span>
+<span class="client">Mountain Mamma</span>
+<span class="amount">320.00 CAD</span>
+<span class="status draft">Draft</span>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+body#permalink {
+background: #f5f5f5 url(../images/permalink_body_back.png) repeat-x;
+float: left;
+}
+body#permalink #container {
+margin-right: auto;
+margin-left: auto;
+width: 700px;
+padding-bottom: 40px;
+background-repeat: no-repeat;
+}
+body#permalink #actions {
+float: right;
+margin-right: -6px;
+margin-bottom: 16px;
+margin-top: 16px;
+}
+body#permalink #actions .button {
+float: left;
+background-image: url(../images/permalink_button.png);
+width: 140px;
+margin-left: 6px;
+}
+body#permalink div#badge {
+width: 95px;
+height: 93px;
+float: left;
+margin: -42px 95px -93px -42px;
+z-index: 100;
+position: relative;
+background: url(../images/permalink_badge.png) 0 0;
+}
+body#permalink div#badge.paid {
+}
+body#permalink div#badge.due {
+background-position: -95px;
+}
+body#permalink #message {
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+width: 680px;
+padding: 10px;
+float: left;
+margin-bottom: 30px;
+background-color: silver;
+border: 1px solid #b7b7b7;
+}
+body#permalink #message .field {
+font-size: 16px;
+float: left;
+width: 100px;
+margin-top: 10px;
+margin-right: 10px;
+border-bottom-color: #b7b7b7;
+border-right-color: #b7b7b7;
+}
+body#permalink #message #pay {
+float: left;
+background-image: url(../images/permalink_pay_button.png);
+}
+body#permalink #message label {
+float: left;
+font-weight: bold;
+margin-left: 186px;
+margin-right: 10px;
+margin-top: 14px;
+}
+div#invoice {
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+width: 620px;
+font: 12px/normal "Lucida Grande",Lucida,Verdana,sans-serif;
+float: left;
+border: 1px solid #fff;
+padding: 40px;
+margin-top: -2px;
+margin-left: -2px;
+background-color: #fff;
+margin-bottom: 60px;
+}
+div#invoice p {
+margin: 2px 0 0;
+}
+div#invoice ul {
+margin: 0;
+padding: 0;
+}
+div#invoice li {
+padding: 0;
+list-style-type: none;
+margin: 0;
+float: left;
+}
+div#invoice div#holder {
+min-height: 670px;
+width: 620px;
+float: left;
+}
+div#invoice div#invoice_head {
+width: 620px;
+float: left;
+margin-bottom: 20px;
+}
+div#invoice div#invoice_logo {
+width: 250px;
+float: left;
+}
+div#invoice div#invoice_logo h1 {
+font-size: 20px;
+width: 248px;
+height: 43px;
+color: #000;
+float: left;
+margin-top: 0;
+margin-bottom: 0;
+line-height: 43px;
+font-weight: bold;
+white-space: nowrap;
+}
+div#invoice div#details {
+float: right;
+width: 320px;
+}
+div#invoice div#details div.left {
+float: left;
+text-align: right;
+font-weight: bold;
+margin-right: 10px;
+width: 150px;
+white-space: nowrap;
+}
+div#invoice div#details div.right {
+float: left;
+font-weight: bold;
+width: 160px;
+white-space: nowrap;
+}
+div#invoice div#address {
+width: 620px;
+float: left;
+margin-bottom: 20px;
+}
+div#invoice div#address h3 {
+margin: 0 0 2px;
+font-size: 14px;
+}
+div#invoice div#address div#to {
+float: left;
+margin-right: 100px;
+}
+div#invoice #address div#from {
+float: left;
+}
+div#invoice div#notes { width:580px; padding:10px 20px; float:left; font-size:11px; line-height:18px; margin:20px 0; border-bottom-style:solid; border-bottom-width:1px; border-top-width:1px; border-top-style:solid; }
+div#invoice div#notes h3 { margin:0 0 2px; font-size:11px; }
+div#invoice div#lines {
+width: 620px;
+float: left;
+}
+div#invoice #lines li#bar {
+width: 620px;
+padding-top: 10px;
+padding-bottom: 10px;
+font-weight: bold;
+font-size: 11px;
+float: left;
+border-top-width: 1px;
+border-top-style: solid;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+}
+div#invoice div#lines li#bar span.qty {
+width: 80px;
+float: left;
+margin-right: 20px;
+}
+div#invoice div#lines li#bar span.description {
+width: 260px;
+float: left;
+margin-right: 20px;
+margin-left: 20px;
+}
+div#invoice div#lines li#bar span.price {
+width: 80px;
+float: left;
+margin-right: 20px;
+}
+div#invoice div#lines li#bar span.total {
+width: 100px;
+float: left;
+margin-right: 0;
+text-align: right;
+}
+div#invoice div#lines li.line {
+width: 620px;
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 11px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+}
+div#invoice div#lines li.line.alt {
+}
+div#invoice div#lines li.line .qty {
+width: 80px;
+float: left;
+margin-right: 20px;
+}
+div#invoice div#lines li.line .description {
+min-height: 10px;
+width: 260px;
+float: left;
+margin-right: 20px;
+margin-left: 20px;
+}
+div#invoice div#lines li.line .price {
+width: 80px;
+float: left;
+margin-right: 20px;
+}
+div#invoice div#lines li.line .total {
+width: 100px;
+float: left;
+margin-right: 0;
+text-align: right;
+}
+div#invoice div#lines div#subtotal {
+float: right;
+margin-top: 20px;
+padding-right: 20px;
+width: 340px;
+}
+div#invoice div#lines div#subtotal p {
+margin-bottom: 6px;
+}
+div#invoice div#lines div#subtotal p.total {
+font-weight: bold;
+margin-top: 10px;
+font-size: 14px;
+margin-bottom: 10px;
+}
+div#invoice div#lines div#subtotal p.total span#sum {
+}
+div#invoice div#lines div#subtotal div.left {
+text-align: right;
+font-weight: bold;
+margin-right: 20px;
+float: left;
+width: 180px;
+}
+div#invoice div#lines div#subtotal div.right {
+text-align: right;
+float: left;
+width: 140px;
+font-weight: bold;
+}
+
+div#invoice div#options { margin-top:20px; width:620px; float:left; }
+div#invoice div#options li#option_bar { width:620px; padding-top:10px; padding-bottom:10px; font-weight:bold; font-size:11px; float:left; border-top-width:1px; border-top-style:solid; border-bottom-style:solid; border-bottom-width:1px; }
+div#invoice div#options li#option_bar span.qty { width:80px; float:left; margin-right:20px; }
+div#invoice div#options li#option_bar span.description { width:260px; float:left; margin-right:20px; margin-left:20px; }
+div#invoice div#options li#option_bar span.price { width:80px; float:left; margin-right:20px; }
+div#invoice div#options li#option_bar span.total { width:100px; float:left; margin-right:20px; text-align:right; }
+div#invoice div#options li.option { width:620px; padding-top:10px; padding-bottom:10px; font-size:11px; border-bottom-style:solid; border-bottom-width:1px; position:relative; }
+div#invoice div#options li.option.alt { }
+div#invoice div#options li.option .qty { width:80px; float:left; margin-right:20px; }
+div#invoice div#options li.option .description { min-height:10px; width:260px; float:left; margin-right:20px; margin-left:20px; }
+div#invoice div#options li.option .price { width:80px; float:left; margin-right:20px; }
+div#invoice div#options li.option .total { width:100px; float:left; margin-right:20px; text-align:right; }
+div#invoice div#options li.option div.checkbox_wrapper { position: absolute; top:7px; left: -10px; }
+
+div#invoice div#lines div#notes {
+width: 580px;
+padding: 10px 20px;
+float: left;
+font-size: 11px;
+line-height: 18px;
+margin-top: 40px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-top-width: 1px;
+border-top-style: solid;
+}
+div#invoice div#lines div#notes h3 {
+margin: 0 0 2px;
+font-size: 11px;
+}
+div#invoice div#invoice_foot {
+width: 620px;
+height: 40px;
+line-height: 12px;
+font-size:10px;
+text-align: center;
+float: left;
+margin-top: 20px;
+}

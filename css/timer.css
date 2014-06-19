@@ -1,0 +1,27 @@
+html, body { margin:0; padding:0; border:0; }
+body { background-color:#fff; font: normal 16px/24px helvetica, arial, sans-serif; }
+
+.hide { display: none; }
+
+#time { padding:10px; color:#4fcbdf; font-size:34px; font-height:34px; text-align:center; }
+
+ul#projects { margin:0; padding:0; list-style:none; }
+ul#projects li { position: relative; margin:5px; padding:5px 5px 5px 10px; height:24px; background-color: #deeef0; color: #7e8084; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+ul#projects li:hover { background-color: #c9e2e2; }
+ul#projects li.current { background-color: #4fcbdf; color: #fff; }
+ul#projects li span { }
+ul#projects li b { color: #9d9d91; }
+ul#projects li.current b { color: #ddd; }
+ul#projects li img { float: right; margin-left: 5px; cursor: pointer; }
+
+#log-box { position: relative; margin: 5px; padding: 10px; background-color: #4fcbdf; color: #fff; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px }
+#log-box h3 { margin:0; padding:0; }
+#log-box input { border: 1px solid #B3E3ED; padding:5px; }
+#log-box input:focus { border-color:#000; }
+#log-box .links { position: absolute; top: 5px; right: 10px; }
+#log-box .links a { color: #fff; }
+#timer-duration { width: 45px; }
+#timer-description { width: 315px; }
+
+#error { margin: 5px; padding: 5px 10px; background-color: #c81b1b; color: #fff; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px }
+#success { margin: 5px; padding: 5px 10px; background-color: #4fcbdf; color: #fff; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px }

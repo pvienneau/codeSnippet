@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Philippe Archambault | View Invoice</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+	
+<link rel="stylesheet" type="text/css" media="all" href="css/foundation.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/application.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/invoice_grey.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.plugins.js"></script>
+<script type="text/javascript" src="js/jquery.application.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="head">
+
+<div id="head_inner">
+
+<h1 id="logo">Philippe Archambault</h1>
+
+
+
+
+
+<ul id="shortcut">
+<li><a href="account/upgrade">Upgrade</a></li>
+<li><a href="account">Account</a></li>
+<li><a href="users">Users</a></li>
+<li><a href="settings">Settings</a></li>
+
+<li><a href="logout" id="logout">Logout</a></li>
+</ul>
+
+
+
+
+	
+<ul id="nav">
+<li><a href="invoices" class="current" id="invoices">Invoices</a></li>
+<li><a href="recurring" id="recurring">Recurring</a></li>
+<li><a href="projects" id="projects">Projects</a></li>
+<li><a href="items" id="items">Items</a></li>
+<li><a href="clients" id="clients">Clients</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="container">
+	
+<div id="page">
+	
+<div class="content" id="view_invoice_section">
+
+<div id="update_sidebar">
+
+<ul class="sidebar" id="246559">
+
+
+<li>
+<a href="#" id="send">Send Invoice</a></li>
+
+<li>
+<a href="invoices/download/246559" id="download">Download PDF</a>
+</li>
+
+<li>
+<a href="#" id="payment">Add Payment</a>
+</li>
+
+<li>
+<a href="#" id="history">View History</a>
+</li>
+
+<li>
+<a href="invoice/view/246559" class="blank" id="permalink">Permalink</a>
+</li>
+
+<li>
+<a href="invoices/edit/246559" id="edit">Edit Invoice</a>
+</li>
+
+<li>
+<a href="#" id="remove">Remove Invoice</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div id="update_send_dialog">
+
+<div class="dialog" id="send_dialog" style="display: none">
+
+<form action="invoices/send/246559" method="post">
+
+<div id="attachment">
+<div class="checkbox_wrapper">
+<input type="checkbox" name="attachment" class="checkbox" checked="checked" />
+</div>
+<label>Attach invoice as a PDF file.</label>
+</div>
+
+<div id="copy">
+<div class="checkbox_wrapper">
+<input type="checkbox" name="copy" class="checkbox" />
+</div>
+<label>Send a copy to phil@roboys.com</label>
+
+</div>
+
+<div class="more" style="display: none">
+
+
+<label>Subject</label>
+<input type="text" name="subject" class="field" value="Invoice 0000041" />
+
+<label>Message</label>
+<textarea name="message" class="textarea">Hello Olivier Dumetz,
+
+Here is the invoice of 2400.00.
+
+You can view the invoice online at:
+
+invoice/view/246559
+
+Best regards,
+Philippe Archambault
+
+Philippe Archambault</textarea>
+
+</div>
+
+<a href="#" class="add_more">Edit email message…</a>
+
+<div class="control">
+
+<input type="submit" class="button" id="send_invoice" value="Send" />
+
+<a class="small_button">Cancel</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div id="update_thank_you_dialog">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="update_payment_dialog">
+
+<div class="dialog" id="payment_dialog" style="display: none">
+
+<form action="invoices/payment/246559" method="post">
+
+<div class="selection">
+
+<div id="amount">
+<label>Amount</label>
+
+<input type="text" name="amount" class="field" value="2400.00" />
+
+</div>
+
+<div id="date">
+<label>Date</label>
+
+<div class="select_wrapper">
+<select name="day" class="select">
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06" selected="selected">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select></div>
+
+<div class="select_wrapper">
+<select name="month" class="select">
+<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10">October</option>
+<option value="11">Novemeber</option>
+<option value="12" selected="selected">December</option>
+</select></div>
+
+<div class="select_wrapper">
+<select name="year" class="select">
+<option value="2008">2008</option>
+<option value="2009" selected="selected">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+</select></div>
+
+</div>
+
+</div>
+
+<div class="control">
+
+<input type="submit" class="button" id="add_payment" value="Add Payment" />
+
+<a class="small_button">Cancel</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="update_history_dialog">
+
+<div class="dialog" id="history_dialog" style="display: none">
+
+
+<div class="row">
+<h3>05 Dec 2009</h3>
+<p>Invoice created.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#" class="small_button" id="close">Close</a>
+
+</div>
+
+</div>
+
+
+
+<div id="update_invoice">
+
+
+
+
+
+
+<div class="invoice_text_normal" id="invoice">
+
+<div id="badge" class="draft"></div>
+
+<div id="holder">
+	
+<div id="invoice_head">
+	
+<div id="invoice_logo">
+
+<h1 id="logo">Philippe Archambault</h1>
+</div>
+	
+<div id="details">
+
+<div class="left">
+<p>Numéro de facture</p>
+<p>Date de facturation</p>
+<p>Le paiement est dû</p>
+</div>
+
+<div class="right invoice_text_light">
+<p>0000041</p>
+
+
+<p>19 Nov 2009</p>
+<p>21 Dec 2009 (30 jours)</p>
+</div>
+
+</div>
+
+</div>
+
+<div id="address">
+
+<div id="to">
+<h3>À</h3>
+<p><strong>Olivier Dumetz</strong></p>
+<p>1155 promenade Elmlea</p>
+
+<p>Ottawa Ontario K1J 6W1</p>
+
+
+</div>
+
+
+<div id="from">
+<h3>De</h3>
+<p><strong>Philippe Archambault</strong></p>
+<p>70 rue Bégin</p>
+
+<p>Gatineau Québec J9A 1E1</p>
+
+
+</div>
+
+
+
+
+</div>
+
+<div id="lines">
+	
+<ul>
+	
+<li class="invoice_bar" id="bar">
+<span class="qty">Qté</span>
+<span class="description">Description</span>
+<span class="price">Prix</span>
+<span class="total">Total</span>	
+</li>
+
+<li class="line invoice_line">
+
+<span class="qty">
+
+8
+
+heures
+
+
+
+
+
+
+</span>
+<span class="description">Découpe template général des modules</span>
+<span class="price">
+50.00</span>
+<span class="total">
+400.00</span>	
+</li>
+<li class="line invoice_line alt">
+
+<span class="qty">
+
+16
+
+heures
+
+
+
+
+
+
+</span>
+<span class="description">Insertion de contenu "The Book"</span>
+<span class="price">
+50.00</span>
+<span class="total">
+800.00</span>	
+</li>
+<li class="line invoice_line">
+
+<span class="qty">
+
+24
+
+heures
+
+
+
+
+
+
+</span>
+<span class="description">Module Puzzle</span>
+<span class="price">
+50.00</span>
+<span class="total">
+1200.00</span>	
+</li>
+
+
+</ul>
+
+<div id="subtotal">
+
+
+
+<div class="left">
+<p class="total">Total</p>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="right invoice_text_light">
+
+
+
+
+
+
+
+
+
+<p class="total invoice_total">
+2400.00 CAD</p>
+
+
+
+
+</div>
+
+</div>
+
+<div class="invoice_notes" id="notes">
+<h3>Remarques</h3>
+<p>Projet: Library of Parliament</p>
+</div>
+
+</div>
+
+</div>
+<div class="invoice_text_light" id="invoice_foot">The Invoice Machine - http://invoicemachine.com</div>
+
+</div></div>
+
+</div></div>
+
+</div>
+
+</body>
+</html>

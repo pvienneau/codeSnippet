@@ -1,0 +1,1 @@
+<a href="milestone/add" class="button right">Add a new Milestone</a>

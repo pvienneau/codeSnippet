@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Philippe Archambault | Edit Item</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+	
+<link rel="stylesheet" type="text/css" media="all" href="css/foundation.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/application.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/invoice_grey.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.plugins.js"></script>
+<script type="text/javascript" src="js/jquery.application.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="head">
+
+<div id="head_inner">
+
+<h1 id="logo">Philippe Archambault</h1>
+
+
+
+
+
+<ul id="shortcut">
+<li><a href="account/upgrade">Upgrade</a></li>
+<li><a href="account">Account</a></li>
+<li><a href="users">Users</a></li>
+<li><a href="settings">Settings</a></li>
+
+<li><a href="logout" id="logout">Logout</a></li>
+</ul>
+
+
+
+
+	
+<ul id="nav">
+<li><a href="invoices" id="invoices">Invoices</a></li>
+<li><a href="recurring" id="recurring">Recurring</a></li>
+<li><a href="projects" id="projects">Projects</a></li>
+<li><a href="items" class="current" id="items">Items</a></li>
+<li><a href="clients" id="clients">Clients</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="container">
+	
+<div id="page">
+	
+<div class="content edit_section" id="edit_item_section">
+	
+<h3 class="title">Edit Item</h3>
+
+<div class="box">
+
+<form action="/items/edit/223189" method="post">
+
+<div class="inline">
+<label>Description</label>
+<input type="text" name="description" class="field" value="Sample Item" />
+
+</div>
+
+<div class="inline qty">
+<label>Qty</label>
+
+<input type="text" name="qty" class="field smallest" value="1" />
+
+<div class="select_wrapper">
+<select name="kind" class="select">
+<option value="hour">hour</option>
+<option value="day">day</option>
+<option value="service">service</option>
+<option value="product" selected="selected">product</option>
+</select></div>
+
+</div>
+
+<div class="inline last">
+<label>Price</label>
+<input type="text" name="price" class="field small" value="200" />
+</div>
+
+<div class="inline control">
+<input type="submit" class="button edit" value="Save Changes" />
+</div>
+
+</form>
+
+</div>
+
+</div></div>
+
+</div>
+
+</body>
+</html>

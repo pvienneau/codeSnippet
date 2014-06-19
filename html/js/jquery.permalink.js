@@ -1,0 +1,3 @@
+$(document).ready(function(){image=new Image();image.src='images/permalink_pay_button.png';$('#pay').removeAttr('disabled','disabled').removeClass('disabled').val('Pay Now');$('#amount').keypress(function(e){if(e.charCode!=46&&e.charCode!=44&&e.charCode!=32&&(event.charCode<48||event.charCode>57)){e.preventDefault();}});$('#pay_with_paypal').click(function(){$('#message').fadeIn('fast');$('#message #amount').focus();return false;});$('#message form').submit(function(){if($('#amount').val()==''){$('#amount').focus().addClass('required');}
+else{$('#pay').attr('disabled','disabled').addClass('disabled').val('Loading…');return true;}
+return false;});});

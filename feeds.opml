@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+<title>Vienna Subscriptions</title>
+<dateCreated>2011-03-18 15:54:10 -0400</dateCreated>
+</head>
+<body>
+<outline text="autres">
+<outline type="rss" text="Campaign Monitor Blog" xmlUrl="http://feeds.feedburner.com/CampaignMonitor" description="" htmlUrl="http://www.campaignmonitor.com"/>
+</outline>
+<outline text="coding">
+<outline type="rss" text="Ajaxian" xmlUrl="http://feeds.feedburner.com/ajaxian" description="Cleaning up the web with Ajax" htmlUrl="http://ajaxian.com"/>
+<outline type="rss" text="del.icio.us/devkick" xmlUrl="http://feeds.feedburner.com/devkick/news" description="bookmarks posted by devkick" htmlUrl="http://www.delicious.com/devkick"/>
+<outline type="rss" text="devKick Components" xmlUrl="http://feeds.feedburner.com/devkick" description="Fresh web development components" htmlUrl="http://devkick.com/"/>
+<outline type="rss" text="Feature" xmlUrl="http://dev.mobi/taxonomy/term/51/feed" description="mobiForge Content Feed" htmlUrl="http://mobiforge.com/rssfeed"/>
+<outline type="rss" text="Jens Meiert" xmlUrl="http://meiert.com/en/feed/" description="Jens O. Meiert (Google, W3C, O’Reilly) on professional web design, web development, accessibility, and usability. Researching and describing what makes the perfect website since 1999." htmlUrl="http://meiert.com/en"/>
+<outline type="rss" text="MiniAjax.com" xmlUrl="http://feeds.feedburner.com/miniajax" description="MiniAjax.com - A showroom of nice looking simple downloadable DHTML and AJAX scripts. Brought to you by the folks at Arc90." htmlUrl="http://www.miniajax.com"/>
+<outline type="rss" text="mir.aculo.us - Home" xmlUrl="http://feeds.feedburner.com/miraculous" description="Just another WordPress weblog" htmlUrl="http://mir.aculo.us"/>
+<outline type="rss" text="Peppermint Tea" xmlUrl="http://feeds.feedburner.com/massiveblue/pepper" description="A civilised collection of third party plugins for Mint" htmlUrl="http://pepperminttea.co.uk/"/>
+<outline type="rss" text="Pixarea Blog" xmlUrl="http://blog.pixarea.com/rss.php" description="Web design, xhtml, css, infographie, 3d, web standards, photo, technologie, etc." htmlUrl="http://blog.pixarea.com/index.php/"/>
+<outline type="rss" text="Solucija" xmlUrl="http://www.solucija.com/rss/" description="" htmlUrl="http://www.solucija.com/"/>
+<outline type="rss" text="solutoire.com" xmlUrl="http://feeds.feedburner.com/solutoire" description="Publicing platform" htmlUrl="http://solutoire.com"/>
+<outline type="rss" text="WebAppers" xmlUrl="http://feeds.feedburner.com/Webappers" description="- Hunting the Best Open Source Resources for Web Developers" htmlUrl="http://www.webappers.com"/>
+<outline type="rss" text="zed23" xmlUrl="http://www.zed23.com/?feed=rss2" description="" htmlUrl="http://www.zed23.com"/>
+</outline>
+<outline text="computer-science">
+<outline type="rss" text="Cagintranet Networks" xmlUrl="http://feeds.feedburner.com/cagintranet/" description="Pittsburgh Web Design Â» Cagintranet Web Design - Web Designer, Developer, Graphic Artist and Web 2.0 Guru" htmlUrl="http://www.cagintranet.com"/>
+<outline type="rss" text="Lifehacker" xmlUrl="http://feeds.gawker.com/lifehacker/full" description="Computers make us more productive. Yeah, right. Lifehacker recommends the software downloads and web sites that actually save time. Don&apos;t live to geek; geek to live." htmlUrl="http://lifehacker.com"/>
+<outline type="rss" text="Slashdot" xmlUrl="http://rss.slashdot.org/Slashdot/slashdot" description="News for nerds, stuff that matters" htmlUrl="http://slashdot.org/"/>
+<outline type="rss" text="The Blog Joint" xmlUrl="http://feeds.feedburner.com/TheBlogJoint" description="Tech News/Reviews/How To&apos;s" htmlUrl="http://theblogjoint.com"/>
+<outline type="rss" text="Today on iTWire" xmlUrl="http://www.itwire.com.au/component/option,com_ds-syndicate/version,1/feed_id,9/" description="" htmlUrl="http://www.itwire.com"/>
+<outline type="rss" text="Wired News: Top Stories" xmlUrl="http://feeds.wired.com/wired/topheadlines" description="" htmlUrl="http://www.wired.com/rss/index.xml"/>
+</outline>
+<outline type="rss" text="Elegant UI" xmlUrl="http://feeds.feedburner.com/elegantui" description="Elegant User Interface Design" htmlUrl="http://www.elegantui.com"/>
+<outline type="rss" text="Events organized by Social Media Breakfast Ottawa" xmlUrl="http://www.eventbrite.com/atom/organizer_list_events/59325391" description="SMBOttawa 21 is sponsored in part by:
+
+
+Will entrepreneurs power the recovery? Absolutely. Entrepreneurs have the fresh thinking and unstoppable drive it takes to turn risk into opportunity. Every day, innovators like you are building Canada&amp;#39;s extraordinary businesses -- Ernst &amp;amp; Young can help. Around the world, we&amp;#39;ve helped thousands of ambitious entrepreneurs achieve their dreams, from startup to market leadership.
+Contact:
+Bryan Haralovich, Technology Market Leader, bryan.b.haralovich@ca.ey.com | 613-598-4347
+Mike Mercier, Assurance Senior Manager, michael.mercier@ca.ey.com | 613-598-4883
+Since 2008, SMBOttawa events are inspired and have evolved from the Social Media Breakfast concept started by Bryan Person in Boston:
+&amp;quot;. . . as an almost-monthly event where social media experts and newbies alike come together to eat, meet, share, and learn. Marketers, PR pros, entrepreneurs, bloggers, podcasters, new media fanatics, and online social networkers are all welcome to attend.&amp;quot;
+SMBOttawa is organized and hosted by:
+Rob Lane, Overlay.TV
+Ryan Anderson, Fat Canary
+Simon Chen, Ramius Corporation
+ " htmlUrl="http://www.eventbrite.com/org/59325391"/>
+<outline text="Flash">
+<outline type="rss" text="Airtight News" xmlUrl="http://www.airtightinteractive.com/news/?feed=rss2" description="Felix Turner&apos;s blog about technology &amp; design." htmlUrl="http://www.airtightinteractive.com"/>
+<outline type="rss" text="decker labs" xmlUrl="http://labs.eric-decker.com/?feed=rss2" description="" htmlUrl="http://labs.eric-decker.com"/>
+<outline type="rss" text="Mikko Haapoja&apos;s Blog" xmlUrl="http://feeds.feedburner.com/MikkoHaapoja" description="" htmlUrl="http://www.mikkoh.com/blog"/>
+<outline type="rss" text="Soulwire" xmlUrl="http://blog.soulwire.co.uk/feed/" description="Art + Technology" htmlUrl="http://blog.soulwire.co.uk"/>
+<outline type="rss" text="squidder.com" xmlUrl="http://www.squidder.com/feed/" description="Actionscript you&apos;ll lose your ink over." htmlUrl="http://www.squidder.com"/>
+</outline>
+<outline text="Freelancing">
+<outline type="rss" text="EliteFreelancing.com - Web design business best practices and strategy" xmlUrl="http://feeds.feedburner.com/EliteFreelancing" description="Tips, resources and tactics for web workers." htmlUrl="http://www.elitefreelancing.com"/>
+</outline>
+<outline text="graphic-design">
+<outline type="rss" text="A List Apart" xmlUrl="http://www.alistapart.com/feed/rss.xml" description="" htmlUrl="http://www.alistapart.com/articles/"/>
+<outline type="rss" text="Abduzeedo by design -" xmlUrl="http://feeds.feedburner.com/abduzeedo" description="" htmlUrl="http://abduzeedo.com"/>
+<outline type="rss" text="Ars Thanea Blog" xmlUrl="http://blog.arsthanea.com/feed/" description="Make fresh ideas coming to life. Break the limits. Push the boundaries." htmlUrl="http://blog.arsthanea.com"/>
+<outline type="rss" text="BittBox" xmlUrl="http://feeds.feedburner.com/Bittbox" description="Design Bitts, Free Web Page Elements, Design Tutorials, Homemade Vector Freebies." htmlUrl="http://www.bittbox.com"/>
+<outline type="rss" text="boomblogue.ca" xmlUrl="http://boomblogue.ca/index.php?/feeds/index.rss2" description="ca c sur, quand t&apos;assure, c pas dur!" htmlUrl="http://boomblogue.ca/"/>
+<outline type="rss" text="Cult-foo (1)" xmlUrl="http://feeds.feedburner.com/web_inspirations" description="Latest techniques  and innovations at web development" htmlUrl="http://www.cult-f.net"/>
+<outline type="rss" text="Daily.Phirebrush" xmlUrl="http://daily.phirebrush.com/index.php/category/news/feed" description="your (somewhat) daily news fix!" htmlUrl="http://daily.phirebrush.com"/>
+<outline type="rss" text="design fckr" xmlUrl="http://feeds.feedburner.com/DesignFckr" description="Alex Giron&apos;s Personal Web Site" htmlUrl="http://neography.com"/>
+<outline type="rss" text="Design is Kinky" xmlUrl="http://www.designiskinky.net/?feed=rss2" description="Design is Kinky" htmlUrl="http://www.designiskinky.net"/>
+<outline type="rss" text="Design You Trust™" xmlUrl="http://designyoutrust.com/feed/" description="" htmlUrl="http://designyoutrust.com"/>
+<outline type="rss" text="DesignFlavr - Inspirational design served daily | Gallery" xmlUrl="http://feeds.feedburner.com/Designflavr-InspirationalDesignServedDaily" description="Latest additions to DesignFlavr" htmlUrl="http://www.designflavr.com"/>
+<outline type="rss" text="design|snips" xmlUrl="http://feeds.feedburner.com/designsnips" description="Collecting Snippets of Good Design" htmlUrl="http://www.designsnips.com"/>
+<outline type="rss" text="Devlounge - Homepage Feed" xmlUrl="http://feeds.feedburner.com/Devlounge" description="An assortment of the latest activity around Devlounge - from articles and interviews to what&apos;s happening with Devlounge and the web world, we&apos;ve got you covered." htmlUrl="http://www.devlounge.net"/>
+<outline type="rss" text="Dzineblog" xmlUrl="http://feeds.feedburner.com/WebWorldST" description="Design Inspirations and Resources" htmlUrl="http://dzineblog.com"/>
+<outline type="rss" text="FeedMeCoolShit.com" xmlUrl="http://www.feedmecoolshit.com/feed/" description="FeedMeCoolShit Weblog and style indicator, music, fashion, books, technology, skate culture anything great and beneficial to the world." htmlUrl="http://www.feedmecoolshit.com"/>
+<outline type="rss" text="Fubiz.net" xmlUrl="http://www.fubiz.net/blog/rss.php" description="Daily dose of inspiration" htmlUrl="http://www.fubiz.net"/>
+<outline type="rss" text="Grow Collective" xmlUrl="http://www.gr0w.com/uploads/rss.xml" description="" htmlUrl="http://gr0w.com"/>
+<outline type="rss" text="i love typography" xmlUrl="http://feeds.feedburner.com/ILoveTypography" description="" htmlUrl="http://ilovetypography.com"/>
+<outline type="rss" text="idsgn (a design blog): Design and branding news" xmlUrl="http://feeds2.feedburner.com/idsgn" description="" htmlUrl="http://www.idsgn.org/posts/"/>
+<outline type="rss" text="inspiredology.com" xmlUrl="http://feeds.feedburner.com/InspiredologycomInspiredologycom" description="Inspiredology offers designers with inspirational designs and concepts." htmlUrl="http://inspiredology.com"/>
+<outline type="rss" text="markboulton.co.uk | Journal" xmlUrl="http://www.markboulton.co.uk/journal/rss_2.0/" description="" htmlUrl="http://www.markboulton.co.uk"/>
+<outline type="rss" text="NETDIVER Feed your eyes" xmlUrl="http://www.netdiver.net/rss.xml" description="It&apos;s all about being creative" htmlUrl="http://netdiver.net"/>
+<outline type="rss" text="Newsdesigner.com" xmlUrl="http://www.newsdesigner.com/blog/index.xml" description="" htmlUrl="http://www.newsdesigner.com/blog/"/>
+<outline type="rss" text="Premium Pixels" xmlUrl="http://feeds.feedburner.com/premiumpixels" description="Free Resources for Designers" htmlUrl="http://www.premiumpixels.com"/>
+<outline type="rss" text="PSDTuts - Just Great Photoshop Tutorials" xmlUrl="http://feeds.feedburner.com/psdtuts" description="Photoshop Tutorials" htmlUrl="http://psd.tutsplus.com"/>
+<outline type="rss" text="Web Designer Wall - Design Trends and Tutorials" xmlUrl="http://feeds.feedburner.com/WebDesignerWall" description="A wall of design ideas, web trends, and tutorials." htmlUrl="http://webdesignerwall.com"/>
+<outline type="rss" text="WeBreakStuff" xmlUrl="http://feeds.feedburner.com/webreakstuff" description="A blog on entrepreneurship, user experience, and web innovation. Published by Fred Oliveira." htmlUrl="http://blog.webreakstuff.com"/>
+</outline>
+<outline text="inspiration">
+<outline type="rss" text="CSS Beauty Gallery Entries" xmlUrl="http://www.cssbeauty.com/rss/gallery/" description="CSSBEAUTY is a project focused on providing its audience with a database of well designed CSS based websites from around the world." htmlUrl="http://www.cssbeauty.com/"/>
+<outline type="rss" text="CSS Import" xmlUrl="http://feeds.feedburner.com/cssimport" description="/ Design Inspiration / Design Blog" htmlUrl="http://www.theimport.co.uk"/>
+<outline type="rss" text="CSSElite CSS Gallery - css gallery, website design gallery, web design resources, css design gallery" xmlUrl="http://feeds.feedburner.com/csseliteshowcase" description="Showcasing the best in CSS web design and development." htmlUrl="http://www.csselite.com"/>
+<outline type="rss" text="Design Melt Down" xmlUrl="http://feeds.feedburner.com/designmeltdown/uecD" description="Design elements, trends and patterns in web design" htmlUrl="http://2010.designmeltdown.com"/>
+<outline type="rss" text="Designcollector™ - Digital culture online" xmlUrl="http://feeds.feedburner.com/Designcollector" description="Exploring Digital Culture Online since 2003" htmlUrl="http://designcollector.net"/>
+<outline type="rss" text="Grow Interactive" xmlUrl="http://www.thisisgrow.com/feeds/news.rss" description="News from Grow Interactive" htmlUrl="http://www.thisisgrow.com/"/>
+<outline type="rss" text="InspirationKing" xmlUrl="http://feeds.feedburner.com/Inspirationking" description="Writers get writer?s block. Designers get Designer?s block. Inspirationking is the only known cure, Displaying a wide range of good web design inspiration. We also offer Articles on Web design, Aswell as daily updated Web Design news and Resources, and an active discussion forum." htmlUrl="http://www.inspirationking.com/"/>
+<outline type="rss" text="Juxt Interactive" xmlUrl="http://www.juxtinteractive.com/feed/" description="Just another WordPress weblog" htmlUrl="http://www.juxtinteractive.com"/>
+<outline type="rss" text="Reaction!" xmlUrl="http://feeds.feedburner.com/reaction" description="" htmlUrl="http://www.etre.com/blog/"/>
+<outline type="rss" text="thomas marban&apos;s screenfluent" xmlUrl="http://feeds.feedburner.com/s" description="Screenfluent.com design gallery." htmlUrl="http://screenfluent.com/"/>
+<outline type="rss" text="Web Creme" xmlUrl="http://feeds.feedburner.com/WebCreme" description="Web design inspiration" htmlUrl="http://www.webcreme.com"/>
+</outline>
+<outline text="Marketing">
+<outline type="rss" text="Adviso | Le blogue interne" xmlUrl="http://feeds.feedburner.com/adviso-blogue-interne" description="Porte ouverte sur les réflexions stratégiques de l&apos;équipe d&apos;Adviso" htmlUrl="http://www.adviso.ca/blog"/>
+<outline type="rss" text="Marketingmagazine.com" xmlUrl="http://www.marketingmag.ca/rss/content.xml" description="Marketingmagazine.ca - content" htmlUrl="http://www.marketingmag.ca"/>
+</outline>
+<outline text="Motion">
+<outline type="rss" text="ViaComIT" xmlUrl="http://feeds.feedburner.com/Viacomit" description="" htmlUrl="http://viacomit.net"/>
+</outline>
+<outline text="photography">
+<outline type="rss" text="[daily dose of imagery]" xmlUrl="http://wvs.topleftpixel.com/index_fullfeed.rdf" description="A daily photoblog by Sam Javanrouh." htmlUrl="http://wvs.topleftpixel.com/"/>
+<outline type="rss" text="chromasia online tutorials" xmlUrl="http://www.chromasia.com/tutorials/online/comments/index.xml" description="" htmlUrl="http://www.chromasia.com/tutorials/online/comments/"/>
+<outline type="rss" text="Digital Photography Review (dpreview.com)" xmlUrl="http://www.dpreview.com/news/dpr.rdf" description="Digital Photography Review, Latest digital camera news, camera reviews, galleries, technology and comparisons." htmlUrl="http://www.dpreview.com/"/>
+<outline type="rss" text="Rob Galbraith DPI" xmlUrl="http://www.robgalbraith.com/bins/rss.asp" description="Digital photography news, reviews, tutorials and discussion forums for professional photographers" htmlUrl="http://www.robgalbraith.com/"/>
+</outline>
+<outline text="programmes">
+<outline type="rss" text="Adobe CS5" xmlUrl="http://cs5.org/?feed=rss2" description="Everything about Adobe Creative Suite 5" htmlUrl="http://cs5.org"/>
+<outline type="rss" text="Novemberborn" xmlUrl="http://novemberborn.net/recent/text-entries.atom" description="Website of Mark Wubben, European Dutchman &amp; Web Hacker based out of London, UK.." htmlUrl="http://novemberborn.net"/>
+</outline>
+<outline text="Québec">
+<outline type="rss" text="Ekorce Blog" xmlUrl="http://www.ekorce.com/blog/feed/" description="" htmlUrl="http://www.ekorce.com"/>
+</outline>
+<outline text="seo">
+<outline type="rss" text="In/Visible" xmlUrl="http://feeds.thestranger.com/stranger/invisible" description="
+			Jen Graves&apos;s Weekly Conversation with People in Art
+		" htmlUrl="http://podcasts.thestranger.com/invisible"/>
+<outline type="rss" text="Matt Cutts: Gadgets, Google, and SEO" xmlUrl="http://feeds.feedburner.com/mattcutts/uJBW" description="neat fun stuff" htmlUrl="http://www.mattcutts.com/blog"/>
+</outline>
+<outline text="UI">
+<outline type="rss" text="Konigi" xmlUrl="http://feeds2.feedburner.com/konigi" description="row" htmlUrl="http://konigi.com/feed.xml"/>
+</outline>
+<outline text="web-design">
+<outline type="rss" text="456 Berea Street" xmlUrl="http://www.456bereastreet.com/feed.xml" description="Roger Johansson is a web professional specialising in web standards, accessibility, and usability." htmlUrl="http://www.456bereastreet.com/"/>
+<outline type="rss" text="Cart Craze" xmlUrl="http://feeds.feedburner.com/CartCraze" description="" htmlUrl="http://cartcraze.com/"/>
+<outline type="rss" text="Clagnut" xmlUrl="http://feeds.feedburner.com/Clagnut" description="A blog by Richard Rutter. Root through a heap of web design and development stuff and a few other tasty morsels. (latest 5 posts in full)" htmlUrl="http://clagnut.com/"/>
+<outline type="rss" text="CSS Beauty News Feed" xmlUrl="http://www.cssbeauty.com/rss/news/" description="CSSBEAUTY is a project focused on providing its audience with a database of well designed CSS based websites from around the world." htmlUrl="http://www.cssbeauty.com/"/>
+<outline type="rss" text="CSS Globe Members News" xmlUrl="http://www.cssglobe.com/feed/feed.xml" description="Css Globe Archive" htmlUrl="http://www.cssglobe.com/"/>
+<outline type="rss" text="Cult-foo" xmlUrl="http://feeds.feedburner.com/Cult-foo" description="Latest techniques  and innovations at web development" htmlUrl="http://www.cult-f.net"/>
+<outline type="rss" text="Daring Fireball" xmlUrl="http://daringfireball.net/index.xml" description="Mac and web curmudgeonry/nerdery. By John Gruber." htmlUrl="http://daringfireball.net/"/>
+<outline type="rss" text="David Walsh :: PHP, CSS, MooTools, and Everything Else" xmlUrl="http://feeds.feedburner.com/Bludice" description="Legendary scribbles about JavaScript, HTML5, AJAX, PHP, CSS, and ∞." htmlUrl="http://davidwalsh.name"/>
+<outline type="rss" text="Design Float / Submitted Entries" xmlUrl="http://feeds.feedburner.com/DesignFloat/SubmittedEntries" description="Web Design News &amp; Tips" htmlUrl="http://www.designfloat.com"/>
+<outline type="rss" text="fadtastic - a multi-author web design trends journal" xmlUrl="http://fadtastic.net/?feed=rss2" description="thoughts on | comments about | examples of  } web design trends." htmlUrl="http://fadtastic.net"/>
+<outline type="rss" text="Monday By Noon" xmlUrl="http://mondaybynoon.com/feed" description="A resource for Web designers and developers to read about and discuss their craft." htmlUrl="http://mondaybynoon.com"/>
+<outline type="rss" text="Noupe" xmlUrl="http://feeds.feedburner.com/Noupe" description="Web Designer&apos;s Online Resource" htmlUrl="http://www.noupe.com"/>
+<outline type="rss" text="PortfolioBase all entries" xmlUrl="http://feeds.feedburner.com/portfoliobase" description="" htmlUrl="http://www.portfoliobase.com/"/>
+<outline type="rss" text="Référencement, Design et Cie" xmlUrl="http://s.billard.free.fr/referencement/rss.php" description="Le référencement, le e-marketing, la recherche d&apos;information, la conception web, les standards du web vus par un référenceur" htmlUrl="http://s.billard.free.fr/referencement/"/>
+<outline type="rss" text="Script &amp; Style" xmlUrl="http://feeds.feedburner.com/ScriptAndStyle" description="Grow as a designer and developer." htmlUrl="http://scriptandstyle.com"/>
+<outline type="rss" text="ShaunInman.com/post" xmlUrl="http://www.shauninman.com/post/feeds/posts" description="" htmlUrl="http://www.shauninman.com/"/>
+<outline type="rss" text="SimpleBits" xmlUrl="http://www.simplebits.com/xml/rss.xml" description="Handcrafted pixels &amp; text from Salem, Massachusetts." htmlUrl="http://simplebits.com"/>
+<outline type="rss" text="Smashing Apps" xmlUrl="http://www.smashingapps.com/feed" description="Free and useful online resources for designer and developers" htmlUrl="http://www.smashingapps.com"/>
+<outline type="rss" text="Smashing Magazine" xmlUrl="http://feeds.feedburner.com/SmashingMagazine" description="" htmlUrl="http://www.smashingmagazine.com"/>
+<outline type="rss" text="Snook.ca" xmlUrl="http://feeds.feedburner.com/snookca" description="Tips, Tricks and Bookmarks on Web Development." htmlUrl="http://snook.ca/"/>
+<outline type="rss" text="Style Crunch" xmlUrl="http://feeds.feedburner.com/stylecrunch" description="CSS Showcase - The best selection here!" htmlUrl="http://stylecrunch.com"/>
+<outline type="rss" text="Styleboost links" xmlUrl="http://feeds.feedburner.com/styleboostlinks" description="Webdesign inspiration" htmlUrl="http://styleboost.com"/>
+<outline type="rss" text="Thoughts From Eric" xmlUrl="http://meyerweb.com/eric/thoughts/category/tech/rss2/full" description="Things that Eric A. Meyer, CSS expert, writes about on his personal Web site; it&apos;s largely Web standards and Web technology, but also various bits of culture, politics, personal observations, and other miscellaneous stuff" htmlUrl="http://meyerweb.com/eric/thoughts"/>
+<outline type="rss" text="Unmatched Style | Gallery" xmlUrl="http://www.unmatchedstyle.com/gallery/feed/" description="CSS Gallery and Design Inspiration." htmlUrl="http://www.unmatchedstyle.com"/>
+<outline type="rss" text="Vitamin" xmlUrl="http://feeds.feedburner.com/vitaminmasterfeed" description="Carsonified&apos;s Blog about Web Design, Web Development and Web Business" htmlUrl="http://thinkvitamin.com"/>
+<outline type="rss" text="woork" xmlUrl="http://feeds.feedburner.com/Woork" description="A fresh charge of  creativity" htmlUrl="http://woorkup.com"/>
+<outline type="rss" text="www.onepixelarmy.com" xmlUrl="http://www.onepixelarmy.com/?feed=rss2" description="| CSS Web Gallery | Web Design Inspiration" htmlUrl="http://www.onepixelarmy.com"/>
+</outline>
+</body>
+</opml>

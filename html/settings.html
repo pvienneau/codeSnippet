@@ -1,0 +1,931 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Philippe Archambault | Settings</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+	
+<link rel="stylesheet" type="text/css" media="all" href="css/foundation.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/application.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/invoice_grey.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.plugins.js"></script>
+<script type="text/javascript" src="js/jquery.application.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="head">
+
+<div id="head_inner">
+
+<h1 id="logo">Philippe Archambault</h1>
+
+
+
+
+
+<ul id="shortcut">
+<li><a href="account/upgrade">Upgrade</a></li>
+<li><a href="account">Account</a></li>
+<li><a href="users">Users</a></li>
+<li><a href="settings">Settings</a></li>
+
+<li><a href="logout" id="logout">Logout</a></li>
+</ul>
+
+
+
+
+	
+<ul id="nav">
+<li><a href="invoices" id="invoices">Invoices</a></li>
+<li><a href="recurring" id="recurring">Recurring</a></li>
+<li><a href="projects" id="projects">Projects</a></li>
+<li><a href="items" id="items">Items</a></li>
+<li><a href="clients" id="clients">Clients</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="container">
+	
+<div id="page">
+	
+
+<div class="content" id="settings_section">
+	
+<h3 class="title">Settings</h3>
+
+<ul id="tab">
+<li><a href="#" class="current"><span>General</span></a></li>
+<li><a href="#"><span>Invoices</span></a></li>
+<li><a href="#"><span>Email Messages</span></a></li>
+<li><a href="#"><span>PayPal Integration</span></a></li>
+<li><a href="#"><span>Basecamp Integration</span></a></li>
+</ul>
+
+
+<div class="box" id="show_general_settings">
+
+<div class="information">
+<p>Here you can personalize The Invoice Machine such as time zone, date and number format. You can also add your own application logo.</p>
+</div>
+
+<form action="settings/general" method="post" enctype="multipart/form-data">
+
+<div class="inline">
+<label>Rows Per Page</label>
+
+<div class="select_wrapper">
+<select name="per_page" class="select">
+<option value="10">10</option>
+<option value="20" selected="selected">20</option>
+<option value="30">30</option>
+<option value="40">40</option>
+</select></div>
+
+</div>
+
+<div class="inline">
+<label>Timezone</label>
+
+<div class="select_wrapper">
+<select name="timezone" class="select">
+<option value="UM12">(UTC - 12:00) Eniwetok, Kwajalein</option>
+<option value="UM11">(UTC - 11:00) Nome, Midway Island, Samoa</option>
+<option value="UM10">(UTC - 10:00) Hawaii</option>
+<option value="UM9">(UTC - 9:00) Alaska</option>
+<option value="UM8">(UTC - 8:00) Pacific Time</option>
+<option value="UM7">(UTC - 7:00) Mountain Time</option>
+<option value="UM6">(UTC - 6:00) Central Time, Mexico City</option>
+<option value="UM5" selected="selected">(UTC - 5:00) Eastern Time, Bogota, Lima, Quito</option>
+<option value="UM4">(UTC - 4:00) Atlantic Time, Caracas, La Paz</option>
+<option value="UM25">(UTC - 3:30) Newfoundland</option>
+<option value="UM3">(UTC - 3:00) Brazil, Buenos Aires, Georgetown, Falkland Is.</option>
+<option value="UM2">(UTC - 2:00) Mid-Atlantic, Ascension Is., St. Helena</option>
+<option value="UM1">(UTC - 1:00) Azores, Cape Verde Islands</option>
+<option value="UTC">(UTC) Casablanca, Dublin, Edinburgh, London, Lisbon, Monrovia</option>
+<option value="UP1">(UTC + 1:00) Berlin, Brussels, Copenhagen, Madrid, Paris, Rome</option>
+<option value="UP2">(UTC + 2:00) Kaliningrad, South Africa, Warsaw</option>
+<option value="UP3">(UTC + 3:00) Baghdad, Riyadh, Moscow, Nairobi</option>
+<option value="UP25">(UTC + 3:30) Tehran</option>
+<option value="UP4">(UTC + 4:00) Abu Dhabi, Baku, Muscat, Tbilisi</option>
+<option value="UP35">(UTC + 4:30) Kabul</option>
+<option value="UP5">(UTC + 5:00) Islamabad, Karachi, Tashkent</option>
+<option value="UP45">(UTC + 5:30) Mumbai, Kolkata, Chennai, New Delhi</option>
+<option value="UP6">(UTC + 6:00) Almaty, Colomba, Dhaka</option>
+<option value="UP7">(UTC + 7:00) Bangkok, Hanoi, Jakarta</option>
+<option value="UP8">(UTC + 8:00) Beijing, Hong Kong, Perth, Singapore, Taipei</option>
+<option value="UP9">(UTC + 9:00) Osaka, Sapporo, Seoul, Tokyo, Yakutsk</option>
+<option value="UP85">(UTC + 9:30) Adelaide, Darwin</option>
+<option value="UP10">(UTC + 10:00) Melbourne, Papua New Guinea, Sydney, Vladivostok</option>
+<option value="UP11">(UTC + 11:00) Magadan, New Caledonia, Solomon Islands</option>
+<option value="UP12">(UTC + 12:00) Auckland, Wellington, Fiji, Marshall Islands</option>
+</select></div>
+
+</div>
+
+<div class="inline">
+<label>Daylight Saving</label>
+
+<div class="checkbox_wrapper">
+<input type="checkbox" name="dst" class="checkbox" checked="checked" />
+</div>
+
+</div>
+
+<div class="inline">
+<label>Date Format</label>
+
+
+<div class="select_wrapper">
+<select name="date_format" class="select">
+<option value="01">12/06/2009</option>
+<option value="02">12/06/09</option>
+<option value="03">06.12.2009</option>
+<option value="04">06.12.09</option>
+<option value="05">06-12-2009</option>
+<option value="06">06-12-09</option>
+<option value="07">06/12/2009</option>
+<option value="08">06/12/09</option>
+<option value="09">12.06.2009</option>
+<option value="10">12.06.09</option>
+<option value="11">12-06-2009</option>
+<option value="12">12-06-09</option>
+<option value="13" selected="selected">06 Dec 2009</option>
+<option value="14">06 Dec 09</option>
+<option value="15">2009-12-06</option>
+<option value="16">09-12-06</option>
+</select></div>
+
+</div>
+
+<div class="inline">
+<label>Number Format</label>
+
+<div class="select_wrapper">
+<select name="number_format" class="select">
+<option value="1">1,000.00</option>
+<option value="2" selected="selected">1000.00</option>
+</select></div>
+
+</div>
+
+<div id="application_logo">
+<div class="inline last">
+<label>Application Logo</label>
+
+<input type="file" name="application_logo" size="20" />
+
+<div class="image_details">
+<p>The appliaction logo image must be <strong>360x60 pixels</strong> and in <strong>JPG, GIF or PNG format</strong>. You can <a href="downloads/application_logo_template.zip">Download the application logo template</a> and use as a reference.</p>
+</div>
+
+
+</div>
+
+</div>
+
+<div class="inline control">
+<input type="submit" class="button" id="save_changes" value="Save Changes" />
+</div>
+
+</form>
+
+</div>
+
+
+
+<div>
+
+
+<div class="box" id="show_invoice_settings" style="display: none">
+
+<div class="information">
+<p>Here you can specify your default invoice settings so you don't need to enter them every time. You can override all these settings except, logo, color theme and footer text when you create a new invoice. The color theme, logo and footer will impact all invoices, including already existing ones.</p>
+</div>
+
+<form action="settings/invoice" method="post" enctype="multipart/form-data">
+
+<div class="inline">
+	
+<label>Due</label>
+
+
+<div class="select_wrapper">
+<select name="due" class="select" id="due">
+<option value="0">Immediately</option>
+<option value="10">10 Days</option>
+<option value="15">15 Days</option>
+<option value="30" selected="selected">30 Days</option>
+<option value="45">45 Days</option>
+<option value="60">60 Days</option>
+<option value="other">Other…</option>
+</select></div>
+
+<span id="other" style="display: none">
+
+<input type="text" name="other" class="field" value="0" maxlength="3" /> Days
+
+</span>
+</div>
+
+<div class="inline">
+<label>Discount (%)</label>
+<input type="text" name="discount" class="field small" value="0.00" />
+</div>
+
+<div class="inline">
+<label>Tax 1 (%)</label>
+<input type="text" name="tax_name" class="field" id="tax_name" value="Tax" /><input type="text" name="tax" class="field" id="tax" value="0.00" maxlength="6" />
+</div>
+
+<div class="inline">
+<label>Tax 2 (%)</label>
+<input type="text" name="tax_name_02" class="field" id="tax_name_02" value="Tax" /><input type="text" name="tax_02" class="field" id="tax_02" value="0.00" maxlength="6" />
+</div>
+
+<div class="inline">
+	
+<label>Shipping</label>
+<input type="text" name="shipping" class="field small" value="0.00" />
+
+
+
+</div>
+
+<div class="inline">
+	
+<label>Currency Symbol</label>
+
+<div class="select_wrapper">
+<select name="currency_symbol" class="select">
+<option value="none" selected="selected">None</option>
+<option value="dollar">$</option>
+<option value="euro">€</option>
+<option value="pound">£</option>
+<option value="yen">￥</option>
+</select></div>
+
+</div>
+
+
+<div class="inline"">
+<label>Currency Code</label>
+
+<div class="select_wrapper">
+<select name="currency_code" class="select">
+<option value="none">None</option>
+<option value="USD">U.S. Dollars</option>
+<option value="EUR">Euros</option>
+<option value="GBP">British Pounds</option>
+<option value="JPY">Japan Yen</option>
+<option value="AUD">Australian Dollars</option>
+<option value="CAD" selected="selected">Canadian Dollars</option>
+<option value="SEK">Sweden Kronor</option>
+<option value="DKK">Denmark Kroner</option>
+<option value="NOK">Norway Krone</option>
+<option value="AED">United Arab Emirates Dirhams</option>
+<option value="AFA">Afghanistan Afghanis</option>
+<option value="ALL">Albania Leke</option>
+<option value="AMD">Armenia Drams</option>
+<option value="ANG">Netherlands Antilles Guilders</option>
+<option value="AOA">Angola Kwanza</option>
+<option value="ARS">Argentina Pesos</option>
+<option value="AWG">Aruba Guilders/Florins</option>
+<option value="AZN">Azerbaijan Manats</option>
+<option value="BAM">Bosnia/Herzegovina Convertible Marka</option>
+<option value="BBD">Barbados Dollars</option>
+<option value="BDT">Bangladesh Taka</option>
+<option value="BGN">Bulgaria Leva</option>
+<option value="BHD">Bahrain Dinars</option>
+<option value="BIF">Burundi Francs</option>
+<option value="BMD">Bermuda Dollars</option>
+<option value="BND">Brunei Darussalam Dollars</option>
+<option value="BOB">Bolivia Bolivianos</option>
+<option value="BRL">Brazil Real</option>
+<option value="BSD">Bahamas Dollars</option>
+<option value="BTN">Bhutan Ngultrum</option>
+<option value="BWP">Botswana Pulas</option>
+<option value="BYR">Belarus Rubles</option>
+<option value="BZD">Belize Dollars</option>
+<option value="CDF">Congo/Kinshasa Francs</option>
+<option value="CHF">Switzerland Francs</option>
+<option value="CLP">Chile Pesos</option>
+<option value="CNY">China Yuan Renminbi</option>
+<option value="COP">Colombia Pesos</option>
+<option value="CRC">Costa Rica Colones</option>
+<option value="CSD">Serbia Dinars</option>
+<option value="CUP">Cuba Pesos</option>
+<option value="CVE">Cape Verde Escudos</option>
+<option value="CYP">Cyprus Pounds</option>
+<option value="CZK">Czech Republic Koruny</option>
+<option value="DJF">Djibouti Francs</option>
+<option value="DOP">Dominican Republic Pesos</option>
+<option value="DZD">Algeria Algeria Dinars</option>
+<option value="EEK">Estonia Krooni</option>
+<option value="EGP">Egypt Pounds</option>
+<option value="ERN">Eritrea Nakfa</option>
+<option value="ETB">Ethiopia Birr</option>
+<option value="FJD">Fiji Dollars</option>
+<option value="FKP">Falkland Islands Pounds</option>
+<option value="GEL">Georgia Lari</option>
+<option value="GGP">Guernsey Pounds</option>
+<option value="GHC">Ghana Cedis</option>
+<option value="GIP">Gibraltar Pounds</option>
+<option value="GMD">Gambia Dalasi</option>
+<option value="GNF">Guinea Francs</option>
+<option value="GTQ">Guatemala Quetzales</option>
+<option value="GYD">Guyana Dollars</option>
+<option value="HKD">Hong Kong Dollars</option>
+<option value="HNL">Honduras Lempiras</option>
+<option value="HRK">Croatia Kuna</option>
+<option value="HTG">Haiti Gourdes</option>
+<option value="HUF">Hungary Forint</option>
+<option value="IDR">Indonesia Rupiahs</option>
+<option value="ILS">Israel New Shekels</option>
+<option value="IMP">Isle of Man Pounds</option>
+<option value="INR">India Rupees</option>
+<option value="IQD">Iraq Dinars</option>
+<option value="IRR">Iran Rials</option>
+<option value="ISK">Iceland Kronur</option>
+<option value="JEP">Jersey Pounds</option>
+<option value="JMD">Jamaica Dollars</option>
+<option value="JOD">Jordan Dinars</option>
+<option value="KES">Kenya Shillings</option>
+<option value="KGS">Kyrgyzstan Soms</option>
+<option value="KHR">Cambodia Riels</option>
+<option value="KMF">Comoros Francs</option>
+<option value="KPW">North Korea Won</option>
+<option value="KRW">South Korea Won</option>
+<option value="KWD">Kuwait Dinars</option>
+<option value="KYD">Cayman Islands Dollars</option>
+<option value="KZT">Kazakhstan Tenge</option>
+<option value="LAK">Laos Kips</option>
+<option value="LBP">Lebanon Pounds</option>
+<option value="LKR">Sri Lanka Rupees</option>
+<option value="LRD">Liberia Dollars</option>
+<option value="LSL">Lesotho Maloti</option>
+<option value="LTL">Lithuania Litai</option>
+<option value="LVL">Latvia Lati</option>
+<option value="LYD">Libya Dinars</option>
+<option value="MAD">Morocco Dirhams</option>
+<option value="MDL">Moldova Lei</option>
+<option value="MGA">Madagascar Ariary</option>
+<option value="MKD">Macedonia Denars</option>
+<option value="MMK">Myanmar (Burma) Kyats</option>
+<option value="MNT">Mongolia Tugriks</option>
+<option value="MOP">Macau Patacas</option>
+<option value="MRO">Mauritania Ouguiyas</option>
+<option value="MTL">Malta Liri</option>
+<option value="MUR">Mauritius Rupees</option>
+<option value="MVR">Maldives Rufiyaa</option>
+<option value="MWK">Malawi Kwachas</option>
+<option value="MXN">Mexico Pesos</option>
+<option value="MYR">Malaysia Ringgits</option>
+<option value="MZM">Mozambique Meticais</option>
+<option value="NAD">Namibia Dollars</option>
+<option value="NGN">Nigeria Nairas</option>
+<option value="NIO">Nicaragua Cordobas</option>
+<option value="NPR">Nepal Nepal Rupees</option>
+<option value="NZD">New Zealand Dollars</option>
+<option value="OMR">Oman Rials</option>
+<option value="PAB">Panama Balboa</option>
+<option value="PEN">Peru Nuevos Soles</option>
+<option value="PGK">Papua New Guinea Kina</option>
+<option value="PHP">Philippines Pesos</option>
+<option value="PKR">Pakistan Rupees</option>
+<option value="PLN">Poland Zlotych</option>
+<option value="PYG">Paraguay Guarani</option>
+<option value="QAR">Qatar Rials</option>
+<option value="RON">Romania New Lei</option>
+<option value="RUB">Russia Rubles</option>
+<option value="RWF">Rwanda Rwanda Francs</option>
+<option value="SAR">Saudi Arabia Riyals</option>
+<option value="SBD">Solomon Islands Dollars</option>
+<option value="SCR">Seychelles Rupees</option>
+<option value="SDD">Sudan Dinars</option>
+<option value="SGD">Singapore Dollars</option>
+<option value="SHP">Saint Helena Pounds</option>
+<option value="SIT">Slovenia Tolars</option>
+<option value="SKK">Slovakia Koruny</option>
+<option value="SLL">Sierra Leone Leones</option>
+<option value="SOS">Somalia Shillings</option>
+<option value="SPL">Seborga Luigini</option>
+<option value="SRD">Suriname Dollars</option>
+<option value="SVC">El Salvador Colones</option>
+<option value="SYP">Syria Pounds</option>
+<option value="SZL">Swaziland Emalangeni</option>
+<option value="THB">Thailand Baht</option>
+<option value="TJS">Tajikistan Somoni</option>
+<option value="TMM">Turkmenistan Manats</option>
+<option value="TND">Tunisia Dinars</option>
+<option value="TOP">Tonga Paanga</option>
+<option value="TRY">Turkey New Lira</option>
+<option value="TTD">Trinidad and Tobago Dollars</option>
+<option value="TVD">Tuvalu Dollars</option>
+<option value="TWD">Taiwan New Dollars</option>
+<option value="TZS">Tanzania Shillings</option>
+<option value="UAH">Ukraine Hryvnia</option>
+<option value="UGX">Uganda Shillings</option>
+<option value="UYU">Uruguay Pesos</option>
+<option value="UZS">Uzbekistan Sums</option>
+<option value="VEB">Venezuela Bolivares</option>
+<option value="VND">Viet Nam Dong</option>
+<option value="VUV">Vanuatu Vatu</option>
+<option value="WST">Samoa Tala</option>
+<option value="XAG">Silver Ounces</option>
+<option value="XAU">Gold Ounces</option>
+<option value="XCD">East Caribbean Dollars</option>
+<option value="XPD">Palladium Ounces</option>
+<option value="XPT">Platinum Ounces</option>
+<option value="YER">Yemen Rials</option>
+<option value="ZAR">South Africa Rand</option>
+<option value="ZMK">Zambia Kwacha</option>
+<option value="ZWD">Zimbabwe Dollars</option>
+</select></div>
+
+</div>
+
+
+
+<div class="inline">
+	
+<label>Language</label>
+<div class="select_wrapper">
+<select name="language" class="select">
+<option value="english">English</option>
+<option value="spanish">Spanish</option>
+<option value="portuguese">Portuguese</option>
+<option value="german">German</option>
+<option value="french" selected="selected">French</option>
+<option value="italian">Italian</option>
+<option value="dutch">Dutch</option>
+<option value="czech">Czech</option>
+<option value="swedish">Swedish</option>
+<option value="danish">Danish</option>
+<option value="norwegian">Norwegian</option>
+</select></div>
+
+</div>
+
+<div class="inline">
+<label>Display Country</label>
+
+<div class="checkbox_wrapper">
+<input type="checkbox" name="display_country" class="checkbox" checked="checked">
+</div>
+<em>You can turn this off if invoicing within your own country.</em>
+</div>
+
+<div class="inline">
+<label>Notes</label>
+<textarea name="notes" class="textarea notes">Thank You!</textarea>
+</div>
+
+<div class="inline">
+<label>Color Theme</label>
+<ul id="color_theme_holder">
+
+<li class="selected">
+<span class="theme">
+<span id="grey">Grey</span>
+</span>
+
+</li>
+
+<li>
+<span class="theme">
+<span id="black">Black</span>
+</span>
+
+</li>
+
+<li>
+<span class="theme">
+<span id="red">Red</span>
+</span>
+
+</li>
+
+<li>
+<span class="theme">
+<span id="green">Green</span>
+</span>
+
+</li>
+
+<li>
+<span class="theme">
+<span id="blue">Blue</span>
+</span>
+
+</li>
+
+<li>
+<span class="theme">
+<span id="orange">Orange</span>
+</span>
+
+</li>
+
+<li>
+<span class="theme">
+<span id="purple">Purple</span>
+</span>
+
+</li>
+
+<li>
+<span class="theme">
+<span id="graphite">Graphite</span>
+</span>
+
+</li>
+
+</ul>
+
+
+
+</div>
+
+<input type="hidden" name="color_theme" id="color_theme" value="grey" />
+
+
+<div id="invoice_logo">
+<div class="inline">
+<label>Invoice Logo</label>
+<input type="file" name="invoice_logo" size="20" />
+
+<div class="image_details">
+<p>The invoice logo image must be <strong>920x160 pixels</strong> and in <strong>GIF or PNG format</strong> without transparency. You can <a href="downloads/invoice_logo_template.zip">Download the invoice logo template</a> and use as a reference.</p>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="inline last">
+<label>Footer Text</label>
+<div class="with">
+<em><a href="account/upgrade">Upgrade</a> to change or remove the branded footer text.</em>
+<input type="text" name="foot" class="field largest disabled" value="The Invoice Machine - http://invoicemachine.com" disabled="disabled" />
+</div>
+</div>
+
+<div class="inline control">
+<input type="submit" class="button" id="save_changes" value="Save Changes" />
+</div>
+
+
+
+</form>
+
+</div>
+
+
+
+
+<div class="box" id="show_email_message_settings" style="display: none">
+
+<div class="information">
+<p>You can customize the emails you send to your clients. You can also chose if you want to run in automatic mode, then you don't have to worry to whom you have sent reminder or thank you emails to, The Invoice Machine will automatically send it for you.</p>
+</div>
+
+<form action="settings/email" method="post" enctype="multipart/form-data">
+
+<div class="inline">
+<label>Automatic Mode</label>
+
+<div class="checkbox_wrapper">
+<input type="checkbox" name="automatic_mode" class="checkbox" />
+</div>
+Send Thank you and Reminder emails automatically.
+</div>
+
+<div class="inline">
+<label>Invoice Email</label>
+<div class="with">
+<input type="text" name="invoice_email_subject" class="field" value="Invoice {invoice_id}" />
+<textarea name="invoice_email_message" class="textarea largest">Hello {client_name},
+
+Here is the invoice of {invoice_amount}.
+
+You can view the invoice online at:
+
+{invoice_link}
+
+{signature}</textarea>
+
+<input type="hidden" class="default_subject" value="Invoice {invoice_id}" />
+
+<textarea class="default_message" style="display: none">
+Hello {client_name},
+
+Here is the invoice of {invoice_amount}.
+
+You can view the invoice online at:
+
+{invoice_link}
+
+{signature}</textarea>
+
+<div class="tags">
+<h4>Tags</h4>
+<ul>
+<li>{client_name}</li>
+<li>{client_company}</li>
+<li>{invoice_id}</li>
+<li>{invoice_amount}</li>
+<li>{invoice_date}</li>
+<li>{invoice_due_date}</li>
+<li>{invoice_link}</li>
+<li>{signature}</li>
+</ul>
+<a href="#" class="small_button">Restore</a>
+</div>
+
+</div>
+</div>
+
+<div class="inline">
+<label>Thank You Email</label>
+<div class="with">
+<input type="text" name="thank_you_email_subject" class="field" value="Thank You" />
+<textarea name="thank_you_email_message" class="textarea largest">Hello {client_name},
+
+We have received the payment for invoice {invoice_id}, thank you!
+
+You can view the invoice online at:
+
+{invoice_link}
+
+{signature}</textarea>
+
+<input type="hidden" class="default_subject" value="Thank You" />
+
+<textarea class="default_message" style="display: none">
+Hello {client_name},
+
+We have received the payment for invoice {invoice_id}, thank you!
+
+You can view the invoice online at:
+
+{invoice_link}
+
+{signature}</textarea>
+
+<div class="tags">
+<h4>Tags</h4>
+<ul>
+<li>{client_name}</li>
+<li>{client_company}</li>
+<li>{invoice_id}</li>
+<li>{invoice_amount}</li>
+<li>{invoice_date}</li>
+<li>{invoice_due_date}</li>
+<li>{invoice_link}</li>
+<li>{signature}</li>
+</ul>
+<a href="#" class="small_button">Restore</a>
+</div>
+
+</div>
+</div>
+
+<div class="inline">
+<label>Reminder Email</label>
+<div class="with">
+<input type="text" name="reminder_email_subject" class="field" value="Reminder" />
+<textarea name="reminder_email_message" class="textarea largest">Hello {client_name},
+
+Just a reminder that Invoice {invoice_id} was due on {invoice_due_date}. Please make the payment of {invoice_amount} as soon as possible.
+
+You can view the invoice online at:
+
+{invoice_link}
+
+{signature}</textarea>
+
+<input type="hidden" class="default_subject" value="Reminder" />
+
+<textarea class="default_message" style="display: none">
+Hello {client_name},
+
+Just a reminder that Invoice {invoice_id} was due on {invoice_due_date}. Please make the payment of {invoice_amount} as soon as possible.
+
+You can view the invoice online at:
+
+{invoice_link}
+
+{signature}</textarea>
+
+<div class="tags">
+<h4>Tags</h4>
+<ul>
+<li>{client_name}</li>
+<li>{client_company}</li>
+<li>{invoice_id}</li>
+<li>{invoice_amount}</li>
+<li>{invoice_date}</li>
+<li>{invoice_due_date}</li>
+<li>{invoice_link}</li>
+<li>{signature}</li>
+</ul>
+<a href="#" class="small_button">Restore</a>
+</div>
+
+</div>
+</div>
+
+<div class="inline last">
+<label>Signature</label>
+<div class="with">
+<textarea name="signature" class="textarea medium">Best regards,
+{name}
+
+{company}</textarea>
+
+<textarea class="default_message" style="display: none">
+Best regards,
+{name}
+
+{company}</textarea>
+
+<div class="tags last">
+<h4>Tags</h4>
+<ul>
+<li>{name}</li>
+<li>{company}</li>
+</ul>
+<a href="#" class="small_button">Restore</a>
+</div>
+
+</div>
+</div>
+
+<div class="inline control">
+<input type="submit" class="button" id="save_changes" value="Save Changes" />
+</div>
+
+</form>
+
+</div>
+
+
+
+
+
+<div class="box" id="show_paypal_intergration_settings" style="display: none">
+
+<div class="information">
+<p>You can easily let your clients pay you with PayPal by enabling the PayPal integration. A PayPal payment link will be generated and placed on the client's invoice page. The Invoice Machine will be automatically notified and will add the payment to the history and change the status to Paid when an invoice is fully paid. Your client doesn't need a PayPal account to pay you, just a credit card. If you don't have a PayPal account you can <a href="https://www.paypal.com/se/mrb/pal=JAJA3ZGAG69AW" class="blank">signup for one free</a>.</p>
+</div>
+
+<form action="settings/paypal" method="post">
+
+<div class="inline">
+<label>Enabled</label>
+<div class="checkbox_wrapper">
+<input type="checkbox" name="paypal_enabled" class="checkbox" />
+</div>
+</div>
+
+<div class="inline">
+<label>PayPal Email</label>
+<input type="text" name="paypal_email" class="field" value="" />
+</div>
+
+<div class="inline">
+<label>Secondary Currency</label>
+
+<div class="select_wrapper">
+<select name="paypal_currency" class="select">
+<option value="AUD">Australian Dollars</option>
+<option value="GBP">British Pounds</option>
+<option value="CAD" selected="selected">Canadian Dollars</option>
+<option value="CZK">Czech Koruna</option>
+<option value="DKK">Danish Kroner</option>
+<option value="HKD">Hong Kong Dollars</option>
+<option value="HUF">Hungarian Forint</option>
+<option value="ILS">Israeli New Shekels</option>
+<option value="JPY">Japanese Yen</option>
+<option value="MXN">Mexican Pesos</option>
+<option value="NZD">New Zealand Dollars</option>
+<option value="NOK">Norwegian Kroner</option>
+<option value="PLN">Polish Zlotych</option>
+<option value="SGD">Singapore Dollars</option>
+<option value="SEK">Swedish Kronor</option>
+<option value="CHF">Swiss Francs</option>
+<option value="USD">U.S. Dollars</option>
+</select></div>
+
+</div>
+
+<div class="inline last">
+<label>Notification</label>
+<div class="checkbox_wrapper">
+<input type="checkbox" name="paypal_notification" class="checkbox" />
+</div>
+Send a notification by email when a payment is made.
+
+</div>
+
+
+
+
+<div class="inline control">
+<input type="submit" class="button" id="save_changes" value="Save Changes" />
+</div>
+
+</form>
+
+</div>
+
+
+
+<div class="box" id="show_basecamp_intergration_settings" style="display: none">
+
+<div class="information">
+<p>By enabling the Basecamp integration you can access your <a href="http://basecamphq.com" class="blank">Basecamp</a> projects, time entries, companies and people directly in The Invoice Machine. When you create or edit an invoice, a "Insert From Basecamp" option will be added into the insert menu and when you create or edit a client, a  "Import from Basecamp" button will be available. In order for the integration to work, you need to enable the Basecamp API in your Basecamp account and enter your URL, username and password below. We never share this information with anyone.</p>
+</div>
+
+<form action="settings/basecamp" method="post">
+
+<div class="inline">
+<label>Enabled</label>
+<div class="checkbox_wrapper">
+<input type="checkbox" name="basecamp_enabled" class="checkbox" />
+</div>
+</div>
+
+<div class="inline">
+<label>URL</label>
+
+<div class="select_wrapper">
+<select name="basecamp_protocol" class="select">
+<option value="http">http://</option>
+<option value="https">https://</option>
+</select></div>
+
+<input type="text" name="basecamp_account" class="field small" id="basecamp_account" value="" />
+
+<div class="select_wrapper">
+<select name="basecamp_domain" class="select">
+<option value=".basecamphq.com">.basecamphq.com</option>
+<option value=".updatelog.com">.updatelog.com</option>
+<option value=".clientsection.com">.clientsection.com</option>
+<option value=".seework.com">.seework.com</option>
+<option value=".grouphub.com">.grouphub.com</option>
+<option value=".projectpath.com">.projectpath.com</option>
+</select></div>
+
+
+
+</div>
+
+<div class="inline">
+<label>Username</label>
+<input type="text" name="basecamp_username" class="field medium" value="" />
+</div>
+
+<div class="inline last">
+<label>Password</label>
+<input type="password" name="basecamp_password" class="field medium" value="" />
+</div>
+
+
+
+<div class="inline control">
+<input type="submit" class="button" id="save_changes" value="Save Changes" />
+</div>
+
+</form>
+
+</div>
+
+
+
+
+</div></div>
+
+</div>
+
+</body>
+</html>

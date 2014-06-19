@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Philippe Archambault | Projects</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+	
+<link rel="stylesheet" type="text/css" media="all" href="css/foundation.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/application.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/invoice_grey.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.plugins.js"></script>
+<script type="text/javascript" src="js/jquery.application.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="head">
+
+<div id="head_inner">
+
+<h1 id="logo">Philippe Archambault</h1>
+
+
+
+
+
+<ul id="shortcut">
+<li><a href="account/upgrade">Upgrade</a></li>
+<li><a href="account">Account</a></li>
+<li><a href="users">Users</a></li>
+<li><a href="settings">Settings</a></li>
+
+<li><a href="logout" id="logout">Logout</a></li>
+</ul>
+
+
+
+
+	
+<ul id="nav">
+<li><a href="invoices" id="invoices">Invoices</a></li>
+<li><a href="recurring" id="recurring">Recurring</a></li>
+<li><a href="projects" class="current" id="projects">Projects</a></li>
+<li><a href="items" id="items">Items</a></li>
+<li><a href="clients" id="clients">Clients</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="container">
+	
+<div id="page">
+	
+<div class="content edit_section" id="edit_project_section">
+	
+<h3 class="title">Edit Project</h3>
+
+<div class="box">
+
+<form action="projects/edit/223840" method="post">
+
+<div class="inline">
+<label>Description</label>
+<input type="text" name="description" class="field" value="Laughlin - Homepage" />
+</div>
+
+<div class="inline">
+<label>Hours</label>
+<input type="text" name="hours" class="field smallest" value="8" />
+</div>
+
+<div class="inline">
+<label class="optional">Rate</label>
+<input type="text" name="rate" class="field small" value="40.00" />
+</div>
+
+<div class="inline last">
+<label class="optional">Status</label>
+<div class="select_wrapper">
+<select name="status" class="select">
+<option value="draft">Draft</option>
+<option value="billed" selected="selected">Billed</option>
+</select></div>
+</div>
+
+<div class="inline control">
+<input type="submit" class="button edit" value="Save Changes" />
+</div>
+
+</form>
+
+</div>
+
+</div></div>
+
+</div>
+
+</body>
+</html>
