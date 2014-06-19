@@ -16,7 +16,7 @@ class AuthUser
 	static public function load()
 	{
 		if (isset($_SESSION[self::SESSION_KEY]) && isset($_SESSION[self::SESSION_KEY]['username'])) {
-			$user = User::findBy('username', $_SESSION[self::SESSION_KEY]['username']);
+			$user = User::findByUsername($_SESSION[self::SESSION_KEY]['username']);
 		} else if (isset($_COOKIE[self::COOKIE_KEY])) {
 			$user = self::challengeCookie($_COOKIE[self::COOKIE_KEY]);
 			if($user) {
@@ -110,12 +110,12 @@ class AuthUser
 	static public function login($username, $password, $set_cookie=false)
 	{
 		self::logout();
-		  
-		$user = User::findBy('username', $username);
-		
-		if ( ! $user instanceof User && self::ALLOW_LOGIN_WITH_EMAIL) {
-			$user = User::findBy('email', $username);
-		}
+
+		$user = User::findByUsername($username);
+		// 
+		// if ( ! $user instanceof User && self::ALLOW_LOGIN_WITH_EMAIL) {
+		// 	$user = User::findBy('email', $username);
+		// }
 
 		if ($user instanceof User && $user->password == sha1($password) && !$user->deleted) {
 			$user->last_login = date('Y-m-d H:i:s');

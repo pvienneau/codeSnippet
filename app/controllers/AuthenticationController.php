@@ -15,7 +15,8 @@ class AuthenticationController extends Controller
     function __construct()
     {
         AuthUser::load();
-    }
+    	$this->setLayout('visitor');
+	}
     
     // function index()
     // {
@@ -30,7 +31,21 @@ class AuthenticationController extends Controller
     
     function login()
     {
-		$this->display('authentication/login');
+		if (AuthUser::isLoggedIn()) {
+			redirect(get_url());
+		}
+		
+		if(self::is_submit('user')){
+			$post = $_POST;
+			
+			if(AuthUser::login($post['username'], $post['password'])){
+				redirect('/');
+			}else{
+				Flash::set('error', 'Failed to log you in. Please try again.');
+			}
+		}
+	
+		echo $this->render('authentication/login');
 	
 		//if()
 		//
@@ -63,8 +78,8 @@ class AuthenticationController extends Controller
     
     function logout()
     {
-        // AuthUser::logout();
-        //         redirect(get_url());
+        AuthUser::logout();
+        redirect(get_url('login'));
     } // logout
     
     function forgot()
