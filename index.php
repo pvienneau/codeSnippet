@@ -1,8 +1,5 @@
 <?php
 
-//define('DEFAULT_RATE', 50);
-//define('DEFAULT_CONTROLLER', 'invoice');
-
 define('CORE_ROOT', dirname(__FILE__));
 define('APP_PATH', CORE_ROOT.DIRECTORY_SEPARATOR.'app');
 
@@ -35,7 +32,7 @@ Dispatcher::addRoute(array(
 	'/login' => 'authentication/login',
 	'/logout' => 'authentication/logout',
 	'/profile/:any' => 'user/view/$1',
-	'/profile' => 'user/view/'
+	'/profile' => 'user/profile'
 ));
 
 Dispatcher::dispatch(isset($_GET['u']) ? $_GET['u']: AuthUser::getDefaultController());
