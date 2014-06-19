@@ -43,8 +43,8 @@ if (!defined('HELPER_PATH'))		define('HELPER_PATH', CORE_ROOT.DIRECTORY_SEPARATO
 if (!defined('BASE_URL'))			define('BASE_URL', 'http://'.dirname($_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME']) .'/');
 if (!defined('URL_SUFFIX'))			define('URL_SUFFIX', null);
 
-if (!defined('DEFAULT_CONTROLLER')) define('DEFAULT_CONTROLLER', 'user');
-if (!defined('DEFAULT_ACTION'))		define('DEFAULT_ACTION', 'view');
+if (!defined('DEFAULT_CONTROLLER')) define('DEFAULT_CONTROLLER', 'dashboard');
+if (!defined('DEFAULT_ACTION'))		define('DEFAULT_ACTION', 'index');
 if (!defined('DEFAULT_LOCALE'))		define('DEFAULT_LOCALE', 'en');
 
 if (!defined('TABLE_PREFIX'))		define('TABLE_PREFIX', '');
@@ -565,12 +565,12 @@ class Record
 	public static function findOneFrom($class_name, $where, $values=array())
 	{
 		$sql = 'SELECT * FROM '.self::tableNameFromClassName($class_name).' WHERE '.$where;
-		
+
 		$stmt = self::$__CONN__->prepare($sql);
 		$stmt->execute($values);
 		
 		self::logQuery($sql);
-		
+
 		return $stmt->fetchObject($class_name);
 	}
 	
@@ -740,6 +740,10 @@ class Controller
 {
 	protected $layout = FALSE;
 	protected $layout_vars = array();
+	
+	public function __construct(){
+		AuthUser::load();
+	}
 	
 	public function execute($action, $params)
 	{

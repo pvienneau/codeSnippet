@@ -2,8 +2,10 @@
 
 class UserController extends Controller
 {
-	public function __construct(){		
-		if ( ! AuthUser::isLoggedIn()) {
+	public function __construct(){	
+		parent::__construct();
+		
+		if (!AuthUser::isLoggedIn()) {
 			redirect(get_url('login'));
 		}
 		
@@ -22,6 +24,10 @@ class UserController extends Controller
 		echo $this->render('user/view', array(
 			'user' => (is_numeric($id))?User::findById($id):User::findByUsername($id)
 		));
+	}
+	
+	function profile(){
+		$this->view(AuthUser::getId());
 	}
 
 } // end UserController class

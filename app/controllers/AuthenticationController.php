@@ -14,7 +14,8 @@ class AuthenticationController extends Controller
 {
     function __construct()
     {
-        AuthUser::load();
+        parent::__construct();
+
     	$this->setLayout('visitor');
 	}
     
@@ -31,6 +32,7 @@ class AuthenticationController extends Controller
     
     function login()
     {
+	
 		if (AuthUser::isLoggedIn()) {
 			redirect(get_url());
 		}
