@@ -18,10 +18,22 @@ class CodeController extends Controller
 	
 	public function insert(){
 		if(self::is_submit()){
-			
+			$this->_insert();
 		}else{
 			echo $this->render('code/new');
 		};
+	}
+	
+	public function _insert(){
+		$post = $_POST;
+		
+		$code_data = array(
+			'description' => $post['description'],
+			'title' => $post['title']
+		);
+		
+		$code = new Code($code_data);
+		$code->save();
 	}
 
 } // end UserController class
