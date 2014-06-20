@@ -454,7 +454,7 @@ class Record
 		}
 		
 		self::logQuery($sql);
-		
+				
 		// Run it !!...
 		return $return;
 	}
@@ -606,7 +606,7 @@ class Record
 		
 		self::logQuery($sql);
 		
-		return $stmt->fetchObject($class_name);
+		return $stmt->fetchAll(self::FETCH_CLASS, $class_name);
 	}
 	
 	/**/
