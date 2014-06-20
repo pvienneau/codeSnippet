@@ -1,0 +1,9 @@
+body{padding-top:34px;}
+
+
+
+/*#tooltop*/
+#tooltop{height:28px; background-color:#000; position:absolute; top:0px; left:0px; right:0px; padding:4px 20px;}
+#tooltop h1{float:left; color:#FFF; line-height:20px; font-size:15px;}
+#tooltop form.form_code_search{float:right; height:100%; position:relative;}
+#tooltop form input{height:26px; width:200px;}
