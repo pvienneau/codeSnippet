@@ -1,5 +1,9 @@
 body{padding-top:34px;}
-
+input, select, textarea{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 
 /*#tooltop*/
