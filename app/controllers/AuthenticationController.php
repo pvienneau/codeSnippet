@@ -76,7 +76,7 @@ class AuthenticationController extends Controller
 		$post = $_POST;
 		
 		if(AuthUser::login($post['username'], $post['password'])){
-			redirect('/');
+			redirect(get_url());
 		}else{
 			Flash::set('error', 'Failed to log you in. Please try again.');
 		}

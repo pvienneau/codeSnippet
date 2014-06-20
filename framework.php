@@ -413,7 +413,7 @@ class Record
 		$columns = $this->getColumns();
 		$value_of = array();
 		
-		if (empty($this->id)) {
+		if (empty($this->{self::getTable().'_id'})) {
 			
 			if ( ! $this->beforeInsert()) return false;
 			
@@ -428,7 +428,8 @@ class Record
 				 . implode(', ', array_keys($value_of)).') VALUES ('.implode(', ', array_values($value_of)).')';
 			
 			$return = self::$__CONN__->exec($sql) === false ? false : true;
-			$this->id = self::lastInsertId(); 
+
+			$this->{self::getTable().'_id'} = self::lastInsertId(); 
 			 
 			if ( ! $this->afterInsert()) return false;
 		
@@ -446,7 +447,7 @@ class Record
 			unset($value_of['id']);
 			
 			$sql = 'UPDATE '.self::tableNameFromClassName(get_class($this)).' SET '
-				 . implode(', ', $value_of).' WHERE id = '.$this->id;
+				 . implode(', ', $value_of).' WHERE id = '.$this->{self::getTable().'_id'};
 			
 			$return = self::$__CONN__->exec($sql) === false ? false : true;
 			

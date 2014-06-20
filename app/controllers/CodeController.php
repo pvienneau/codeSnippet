@@ -43,6 +43,19 @@ class CodeController extends Controller
 		
 		$code = new Code($code_data);
 		$code->save();
+
+		$code_revision_data = array(
+			'user_id' => AuthUser::getId(),
+			'code_id' => $code->code_id,
+			'rev' => 1,
+			'content' => $post['content'],
+			'description' => 'Initial Commit'
+		);
+		
+		$code_revision = new CodeRevision($code_revision_data);
+		$code_revision->save();
+		
+		redirect(get_url('code/'.$code->code_id));
 	}
 
 } // end UserController class
