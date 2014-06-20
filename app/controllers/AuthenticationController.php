@@ -38,13 +38,7 @@ class AuthenticationController extends Controller
 		}
 		
 		if(self::is_submit('user')){
-			$post = $_POST;
-			
-			if(AuthUser::login($post['username'], $post['password'])){
-				redirect('/');
-			}else{
-				Flash::set('error', 'Failed to log you in. Please try again.');
-			}
+			return $this->_login();
 		}
 	
 		echo $this->render('authentication/login');
@@ -77,6 +71,16 @@ class AuthenticationController extends Controller
         //         redirect(get_url('login'));
         
     } // login
+
+	function _login(){
+		$post = $_POST;
+		
+		if(AuthUser::login($post['username'], $post['password'])){
+			redirect('/');
+		}else{
+			Flash::set('error', 'Failed to log you in. Please try again.');
+		}
+	}
     
     function logout()
     {

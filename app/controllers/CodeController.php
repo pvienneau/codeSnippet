@@ -18,7 +18,7 @@ class CodeController extends Controller
 	
 	public function insert(){
 		if(self::is_submit()){
-			$this->_insert();
+			return $this->_insert();
 		}else{
 			echo $this->render('code/new');
 		};
