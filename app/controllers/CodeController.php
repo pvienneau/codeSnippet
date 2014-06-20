@@ -18,8 +18,14 @@ class CodeController extends Controller
 				'codes' => Code::findLastNth(15)
 			));
 		}else{
+			$code = Code::findById($code_id);
+			
+			if(empty($code)){
+				redirect(get_url('code'));
+			}
+			
 			echo $this->render('code/view', array(
-				'code' => Code::findById($code_id),
+				'code' => $code,
 				'revision' => CodeRevision::findClosestRevision($code_id, $revision)
 			));
 		}
@@ -49,13 +55,21 @@ class CodeController extends Controller
 			'code_id' => $code->code_id,
 			'rev' => 1,
 			'content' => $post['content'],
-			'description' => 'Initial Commit'
+			'description' => 'initial commit.'
 		);
 		
 		$code_revision = new CodeRevision($code_revision_data);
 		$code_revision->save();
 		
 		redirect(get_url('code/'.$code->code_id));
+	}
+	
+	public function search($query = FALSE){
+		if($query === FALSE) return $this->index();
+		
+		echo $this->render('code/listing', array(
+			'codes' => Code::search($query)
+		));
 	}
 
 } // end UserController class
