@@ -598,45 +598,49 @@ class Record
 		return (int) $stmt->fetchColumn();
 	}
 	
-	public static function findLimit($class_name, $limit = FALSE, $order = 'asc'){
-		$sql = 'SELECT * FROM '.self::tableNameFromClassName($class_name).' ORDER BY '.$class_name.'_id '.$order.($limit? ' LIMIT '.$limit:'');
-		
+	public static function findLimit($class_name, $limit = FALSE, $where = FALSE, $values = array(), $order = 'ASC'){
+		$sql = 'SELECT * FROM '.self::tableNameFromClassName($class_name).' ORDER BY '.self::tableNameFromClassName($class_name).'_id '.$order.($limit? ' LIMIT '.$limit:'');
+
 		$stmt = self::$__CONN__->prepare($sql);
 		$stmt->execute();
-		
+
 		self::logQuery($sql);
+		if($limit > 1) return $stmt->fetchAll(self::FETCH_CLASS, $class_name);
+		else return $stmt->fetchObject($class_name);
 		
-		return $stmt->fetchAll(self::FETCH_CLASS, $class_name);
 	}
 	
 	/**/
 	
 	public static function findAll(){
-		$table = self::getTable();
-
-		return self::findAllFrom($table);
+		return self::findAllFrom(get_called_class());
 	}
 	
 	public static function findById($id = FALSE){
-		if($id === FALSE) return FALSE;
+		if($id === FALSE) return FALSE;		
 		
-		$table = self::getTable();
-		
-		
-		return self::findByIdFrom($table, $id);
+		return self::findByIdFrom(get_called_class(), $id);
 	}
 	
-	public static function findLastNth($count = FALSE){
-		$table = self::getTable();
-		
-		return ($count === FALSE)?self::findAllFrom($table):self::findLimit($table, $count, 'desc');
+	public static function findLastNth($count = FALSE, $where = FALSE, $values = array()){
+		return ($count === FALSE)?self::findAllFrom(get_called_class(), $where, $values):self::findLimit(get_called_class(), $count, $where, $values, 'DESC');
 	}
 	
 	private static function getTable(){		
 		if(get_called_class() == get_class()) return false;
 		
-		return get_called_class();
+		return strtolower(preg_replace('/([a-z])([A-Z])/', '$1_$2', get_called_class()));
 	}
+	
+	private static function getClassName($table_name){
+		function _getClassNameCallbackHandler($matches) {
+		    return strtoupper(ltrim($matches[0], "_"));
+		}
+		
+		return ucfirst(preg_replace_callback('/_[a-z]?/','_getClassNameCallbackHandler',$table_name));
+	}
+	
+	
 }
 
 /**
