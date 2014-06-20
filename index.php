@@ -29,10 +29,12 @@ Dispatcher::addRoute(array(
 	#'/project/:num/:any' => '$2/$1',
 	#'/logout' => 'login/logout',
 	#'/people:any' => 'user$1'
+	':any/:num' => '$1/index/$2',
+	':any/new' => '$1/insert',
 	'/login' => 'authentication/login',
 	'/logout' => 'authentication/logout',
 	'/profile/:any' => 'user/view/$1',
-	'/profile' => 'user/profile'
+	'/profile' => 'user/profile',
 ));
 
 Dispatcher::dispatch(isset($_GET['u']) ? $_GET['u']: AuthUser::getDefaultController());
