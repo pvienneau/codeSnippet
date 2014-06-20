@@ -1,39 +1,18 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.3
+-- version 4.1.8
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jun 19, 2014 at 10:41 AM
--- Server version: 5.5.28
--- PHP Version: 5.3.26
+-- Host: localhost:8889
+-- Generation Time: Jun 20, 2014 at 05:43 PM
+-- Server version: 5.5.34
+-- PHP Version: 5.5.9
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
 --
--- Database: `codeSnippet`
+-- Database: `codesnippet`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `comment`
---
-
-CREATE TABLE IF NOT EXISTS `comment` (
-  `comment_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  `content` text COLLATE utf8_unicode_ci NOT NULL,
-  `date_created` datetime NOT NULL,
-  PRIMARY KEY (`comment_id`),
-  KEY `user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -41,14 +20,22 @@ CREATE TABLE IF NOT EXISTS `comment` (
 -- Table structure for table `code`
 --
 
-CREATE TABLE IF NOT EXISTS `code` (
+CREATE TABLE `code` (
   `code_id` int(11) NOT NULL AUTO_INCREMENT,
   `description` text COLLATE utf8_unicode_ci,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `deleted` int(1) NOT NULL DEFAULT '0',
   `date_created` datetime NOT NULL,
   PRIMARY KEY (`code_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `code`
+--
+
+INSERT INTO `code` (`code_id`, `description`, `title`, `deleted`, `date_created`) VALUES
+(1, 'test2', 'test', 0, '2014-06-20 10:40:23'),
+(2, 'test2', 'test', 0, '2014-06-20 10:41:19');
 
 -- --------------------------------------------------------
 
@@ -56,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `code` (
 -- Table structure for table `code_revision`
 --
 
-CREATE TABLE IF NOT EXISTS `code_revision` (
+CREATE TABLE `code_revision` (
   `code_revision_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `code_id` int(11) NOT NULL,
@@ -73,10 +60,25 @@ CREATE TABLE IF NOT EXISTS `code_revision` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `comment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `date_created` datetime NOT NULL,
+  PRIMARY KEY (`comment_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tag`
 --
 
-CREATE TABLE IF NOT EXISTS `tag` (
+CREATE TABLE `tag` (
   `tag_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -89,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `tag` (
 -- Table structure for table `tag_to_code`
 --
 
-CREATE TABLE IF NOT EXISTS `tag_to_code` (
+CREATE TABLE `tag_to_code` (
   `tag_to_code_id` int(11) NOT NULL AUTO_INCREMENT,
   `code_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL,
@@ -109,29 +111,31 @@ CREATE TABLE IF NOT EXISTS `tag_to_code` (
 -- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE `user` (
   `user_Id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `first_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `last_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `deleted` int(1) NOT NULL DEFAULT '0',
   `date_created` datetime NOT NULL,
   `date_last_login` datetime NOT NULL,
   PRIMARY KEY (`user_Id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_Id`, `username`, `email`, `first_name`, `last_name`, `password`, `deleted`, `date_created`, `date_last_login`) VALUES
+(1, 'pvienneau', 'pvienneau@carbure.co', 'Patrick', 'Vienneau', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', 0, '2014-06-20 00:00:00', '0000-00-00 00:00:00');
 
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `comment`
---
-ALTER TABLE `comment`
-  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_Id`);
 
 --
 -- Constraints for table `code_revision`
@@ -141,12 +145,14 @@ ALTER TABLE `code_revision`
   ADD CONSTRAINT `code_revision_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_Id`);
 
 --
+-- Constraints for table `comment`
+--
+ALTER TABLE `comment`
+  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_Id`);
+
+--
 -- Constraints for table `tag_to_code`
 --
 ALTER TABLE `tag_to_code`
   ADD CONSTRAINT `tag_to_code_ibfk_2` FOREIGN KEY (`deleted_by_user_id`) REFERENCES `user` (`user_Id`),
   ADD CONSTRAINT `tag_to_code_ibfk_1` FOREIGN KEY (`code_id`) REFERENCES `code` (`code_id`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
