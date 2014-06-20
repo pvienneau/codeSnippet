@@ -13,6 +13,7 @@ Record::getConnection()->exec("set names 'utf8'");
 
 #use_helper('I18n', 'General');
 use_helper('AuthUser', 'General');
+use_helper('Date', 'General');
 #I18n::setLocale('fr');
 
 setlocale(LC_ALL, 'fr_CA');

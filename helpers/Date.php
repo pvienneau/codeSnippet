@@ -39,3 +39,7 @@ function time_ago_in_words($from_time, $include_seconds = false)
 {
     return distance_of_time_in_words($from_time, $_SERVER['REQUEST_TIME'], $include_seconds);
 }
+
+function mysql_now(){
+	return date('Y-m-d H:i:s');
+}
