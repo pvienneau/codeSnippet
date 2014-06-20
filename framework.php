@@ -598,6 +598,17 @@ class Record
 		return (int) $stmt->fetchColumn();
 	}
 	
+	public static function findLimit($class_name, $limit = FALSE, $order = 'asc'){
+		$sql = 'SELECT * FROM '.self::tableNameFromClassName($class_name).' ORDER BY '.$class_name.'_id '.$order.($limit? ' LIMIT '.$limit:'');
+		
+		$stmt = self::$__CONN__->prepare($sql);
+		$stmt->execute();
+		
+		self::logQuery($sql);
+		
+		return $stmt->fetchObject($class_name);
+	}
+	
 	/**/
 	
 	public static function findAll(){
@@ -613,6 +624,12 @@ class Record
 		
 		
 		return self::findByIdFrom($table, $id);
+	}
+	
+	public static function findLastNth($count = FALSE){
+		$table = self::getTable();
+		
+		return ($count === FALSE)?self::findAllFrom($table):self::findLimit($table, $count, 'desc');
 	}
 	
 	private static function getTable(){		
