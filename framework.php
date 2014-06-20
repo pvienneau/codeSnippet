@@ -560,7 +560,7 @@ class Record
 	
 	public static function findByIdFrom($class_name, $id)
 	{
-		return self::findOneFrom($class_name, $class_name.'_id=?', array($id));
+		return self::findOneFrom(self::tableNameFromClassName($class_name), self::tableNameFromClassName($class_name).'_id=?', array($id));
 	}
 	
 	public static function findOneFrom($class_name, $where, $values=array())
@@ -600,10 +600,18 @@ class Record
 	}
 	
 	public static function findLimit($class_name, $limit = FALSE, $where = FALSE, $values = array(), $order = 'ASC'){
-		$sql = 'SELECT * FROM '.self::tableNameFromClassName($class_name).' ORDER BY '.self::tableNameFromClassName($class_name).'_id '.$order.($limit? ' LIMIT '.$limit:'');
+		$sql = 'SELECT * FROM '.self::tableNameFromClassName($class_name).' ORDER BY '.self::tableNameFromClassName($class_name).'_id '.$order;
+		
+		if($where){
+			$sql .= ' WHERE '.$where;
+		}
+		
+		if($limit){
+			$sql .= ' LIMIT '.$limit;
+		}
 
 		$stmt = self::$__CONN__->prepare($sql);
-		$stmt->execute();
+		$stmt->execute($values);
 
 		self::logQuery($sql);
 		if($limit > 1) return $stmt->fetchAll(self::FETCH_CLASS, $class_name);
@@ -624,7 +632,7 @@ class Record
 	}
 	
 	public static function findLastNth($count = FALSE, $where = FALSE, $values = array()){
-		return ($count === FALSE)?self::findAllFrom(get_called_class(), $where, $values):self::findLimit(get_called_class(), $count, $where, $values, 'DESC');
+		return ($count)?self::findLimit(get_called_class(), $count, $where, $values, 'DESC'):self::findAllFrom(get_called_class(), $where, $values);
 	}
 	
 	private static function getTable(){		

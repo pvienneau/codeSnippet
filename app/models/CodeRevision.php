@@ -22,11 +22,11 @@ class CodeRevision extends Record
 		
 	public static function findClosestRevision($code_id = FALSE, $rev = FALSE){
 		if($rev === FALSE) return self::findLastRevision($code_id);
-		
+
 		return self::findLastNth(1, 'code_id = ? AND rev <= ?', array(code_id, $rev));
 	}
 	
-	public static function findLastRevision($code_id = FALSE){		
+	public static function findLastRevision($code_id = FALSE){				
 		return self::findLastNth(1, 'code_id = ?', array($code_id));
 	}
 	
