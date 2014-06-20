@@ -67,7 +67,7 @@ CREATE TABLE `code_revision` (
 --
 
 INSERT INTO `code_revision` (`code_revision_id`, `user_id`, `code_id`, `rev`, `content`, `description`, `deleted`, `date_created`) VALUES
-(1, 1, 1, 1, '<p>Hello.</p>', 'initial commit', 0, '1899-11-30 00:00:00');
+(1, 1, 1, 1, '<p>Hello.</p>', 'initial commit.', 0, '1899-11-30 00:00:00');
 
 -- --------------------------------------------------------
 
