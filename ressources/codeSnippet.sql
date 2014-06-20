@@ -38,36 +38,36 @@ CREATE TABLE IF NOT EXISTS `comment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `post`
+-- Table structure for table `code`
 --
 
-CREATE TABLE IF NOT EXISTS `post` (
-  `post_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `code` (
+  `code_id` int(11) NOT NULL AUTO_INCREMENT,
   `description` text COLLATE utf8_unicode_ci,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `deleted` int(1) NOT NULL DEFAULT '0',
   `date_created` datetime NOT NULL,
-  PRIMARY KEY (`post_id`)
+  PRIMARY KEY (`code_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `post_revision`
+-- Table structure for table `code_revision`
 --
 
-CREATE TABLE IF NOT EXISTS `post_revision` (
-  `post_revision_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `code_revision` (
+  `code_revision_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
-  `post_id` int(11) NOT NULL,
+  `code_id` int(11) NOT NULL,
   `rev` int(11) NOT NULL,
   `content` text COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `deleted` int(11) NOT NULL DEFAULT '0',
   `date_created` datetime NOT NULL,
-  PRIMARY KEY (`post_revision_id`),
+  PRIMARY KEY (`code_revision_id`),
   UNIQUE KEY `user_id` (`user_id`),
-  KEY `post_id` (`post_id`)
+  KEY `code_id` (`code_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -86,21 +86,21 @@ CREATE TABLE IF NOT EXISTS `tag` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tag_to_post`
+-- Table structure for table `tag_to_code`
 --
 
-CREATE TABLE IF NOT EXISTS `tag_to_post` (
-  `tag_to_post_id` int(11) NOT NULL AUTO_INCREMENT,
-  `post_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tag_to_code` (
+  `tag_to_code_id` int(11) NOT NULL AUTO_INCREMENT,
+  `code_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL,
   `date_created` datetime NOT NULL,
   `created_by_user_id` int(11) NOT NULL,
   `deleted` int(1) NOT NULL DEFAULT '0',
   `deleted_by_user_id` int(11) NOT NULL,
   `date_deleted` datetime NOT NULL,
-  PRIMARY KEY (`tag_to_post_id`),
+  PRIMARY KEY (`tag_to_code_id`),
   UNIQUE KEY `deleted_by_user_id` (`deleted_by_user_id`),
-  KEY `post_id` (`post_id`,`tag_id`)
+  KEY `code_id` (`code_id`,`tag_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -134,18 +134,18 @@ ALTER TABLE `comment`
   ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_Id`);
 
 --
--- Constraints for table `post_revision`
+-- Constraints for table `code_revision`
 --
-ALTER TABLE `post_revision`
-  ADD CONSTRAINT `post_revision_ibfk_2` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`),
-  ADD CONSTRAINT `post_revision_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_Id`);
+ALTER TABLE `code_revision`
+  ADD CONSTRAINT `code_revision_ibfk_2` FOREIGN KEY (`code_id`) REFERENCES `code` (`code_id`),
+  ADD CONSTRAINT `code_revision_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_Id`);
 
 --
--- Constraints for table `tag_to_post`
+-- Constraints for table `tag_to_code`
 --
-ALTER TABLE `tag_to_post`
-  ADD CONSTRAINT `tag_to_post_ibfk_2` FOREIGN KEY (`deleted_by_user_id`) REFERENCES `user` (`user_Id`),
-  ADD CONSTRAINT `tag_to_post_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`);
+ALTER TABLE `tag_to_code`
+  ADD CONSTRAINT `tag_to_code_ibfk_2` FOREIGN KEY (`deleted_by_user_id`) REFERENCES `user` (`user_Id`),
+  ADD CONSTRAINT `tag_to_code_ibfk_1` FOREIGN KEY (`code_id`) REFERENCES `code` (`code_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
