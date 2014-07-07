@@ -600,11 +600,13 @@ class Record
 	}
 	
 	public static function findLimit($class_name, $limit = FALSE, $where = FALSE, $values = array(), $order = 'ASC'){
-		$sql = 'SELECT * FROM '.self::tableNameFromClassName($class_name).' ORDER BY '.self::tableNameFromClassName($class_name).'_id '.$order;
+		$sql = 'SELECT * FROM '.self::tableNameFromClassName($class_name);
 		
 		if($where){
 			$sql .= ' WHERE '.$where;
 		}
+		
+		$sql .= ' ORDER BY '.self::tableNameFromClassName($class_name).'_id '.$order;
 		
 		if($limit){
 			$sql .= ' LIMIT '.$limit;
@@ -631,7 +633,7 @@ class Record
 		return self::findByIdFrom(get_called_class(), $id);
 	}
 	
-	public static function findLastNth($count = FALSE, $where = FALSE, $values = array()){
+	public static function findLastNth($count = FALSE, $where = FALSE, $values = array()){		
 		return ($count)?self::findLimit(get_called_class(), $count, $where, $values, 'DESC'):self::findAllFrom(get_called_class(), $where, $values);
 	}
 	

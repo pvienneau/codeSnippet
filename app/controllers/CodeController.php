@@ -20,6 +20,7 @@ class CodeController extends Controller
 		}else{
 			$code = Code::findById($code_id);
 			
+			//if there's no code at that id, redirect to listing
 			if(empty($code)){
 				redirect(get_url('code'));
 			}
